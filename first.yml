@@ -21,8 +21,8 @@ jobs:
         deploy:   
           steps:
             - script: echo "Hello world"
-- task: SSH@0
-  inputs:
-    runOptions: 'commands'
-    commands: 'touch /tmp/ssh_tester'
-    readyTimeout: '20000'
+            - task: SSH@0
+              inputs:
+                runOptions: 'commands'
+                commands: 'touch /tmp/ssh_tester'
+                readyTimeout: '20000'
