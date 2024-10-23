@@ -13,8 +13,8 @@ jobs:
 - deployment: VMDeploy
   displayName: Deploy to VM
   environment: 
-   name: VMenv
-   resourceName: VMenv
+   name: test
+   resourceName: test
    resourceType: virtualMachine
   strategy:
      runOnce:
