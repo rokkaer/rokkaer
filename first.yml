@@ -23,6 +23,7 @@ jobs:
             - script: echo "Hello world"
             - task: SSH@0
               inputs:
+                sshEndpoint: 'mrj_to_localhost'
                 runOptions: 'commands'
-                commands: 'touch /tmp/ssh_tester'
+                commands: 'touch /tmp/tester'
                 readyTimeout: '20000'
