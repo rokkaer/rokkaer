@@ -1,33 +1,43 @@
 trigger:
   - main
 
-pool:
-  vmImage: 'localhost'  # Use a self-hosted Linux agent if needed
+pool: 
+   vmImage: ubuntu-latest
 
-steps:
-  - script: |
-      sudo dnf update
-      sudo dnf install -y genisoimage xorriso
-
-      # Create a working directory
-      sudo mkdir -p /iso/{EFI,BOOT,Packages,images,isolinux}
-      sudo mkdir -p /new/
-      # Mount the original Red Hat ISO (modify path as necessary)
-      sudo mount -o loop /org/rhel-9.4-x86_64-boot.iso /mnt
-
-      # Copy original files to the working directory
-      sudo cp -r /mnt/* /iso/
-
-      # Unmount the ISO
-      sudo umount /mnt
-
-      # Make your modifications here
-      # Example: Add custom scripts, change configurations, etc.
-      sudo echo "Custom modification" >> /iso/README.txt
-
-      # Create the modified ISO
-      sudo genisoimage -U -r -J -V "Modified_RHEL_ISO" -o /new/rhel-modified.iso /iso/
-    displayName: 'Create Modified Bootable Red Hat ISO'
-
-  - publish: /new/rhel-modified.iso
-    artifact: modified-rhel-iso
+jobs:
+- deployment: VMDeploy
+  displayName: Deploy to VM
+  environment: 
+   name: test
+   resourceName: localhost
+   resourceType: virtualMachine
+  strategy:
+     runOnce:
+        deploy:
+          steps:
+            - script: |
+                sudo dnf update
+                sudo dnf install -y genisoimage xorriso
+          
+                # Create a working directory
+                sudo mkdir -p /iso/{EFI,BOOT,Packages,images,isolinux}
+                sudo mkdir -p /new/
+                # Mount the original Red Hat ISO (modify path as necessary)
+                sudo mount -o loop /org/rhel-9.4-x86_64-boot.iso /mnt
+          
+                # Copy original files to the working directory
+                sudo cp -r /mnt/* /iso/
+          
+                # Unmount the ISO
+                sudo umount /mnt
+          
+                # Make your modifications here
+                # Example: Add custom scripts, change configurations, etc.
+                sudo echo "Custom modification" >> /iso/README.txt
+          
+                # Create the modified ISO
+                sudo genisoimage -U -r -J -V "Modified_RHEL_ISO" -o /new/rhel-modified.iso /iso/
+              displayName: 'Create Modified Bootable Red Hat ISO'
+          
+            - publish: /new/rhel-modified.iso
+              artifact: modified-rhel-iso
