@@ -16,7 +16,7 @@ jobs:
         deploy:
           steps:
             - script: |
-                sudo dnf update
+                sudo dnf update -y
                 sudo dnf install -y genisoimage xorriso
           
                 # Create a working directory
