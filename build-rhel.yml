@@ -37,7 +37,7 @@ jobs:
 # Can not be parsed                echo "Custom modification" | sudo tee -a /iso/README.txt > /dev/null
           
                 # Create the modified ISO
-                sudo genisoimage -U -r -v -J -joliet-long -V RHEL-9.4 -volset RHEL-9.4 -A RHEL-9.4 -b BOOT/isolinux.bin -c BOOT/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -eltorito-alt-boot -e images/efiboot.img -no-emul-boot -o /new/rhel-modified.iso /iso
+                "sudo genisoimage -U -r -v -J -joliet-long -V RHEL-9.4 -volset RHEL-9.4 -A RHEL-9.4 -b BOOT/isolinux.bin -c BOOT/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -eltorito-alt-boot -e images/efiboot.img -no-emul-boot -o /new/rhel-modified.iso /iso"
               displayName: 'Create Modified Bootable Red Hat ISO'
 
 #            - publish: /new/rhel-modified.iso
