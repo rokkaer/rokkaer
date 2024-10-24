@@ -2,12 +2,12 @@ trigger:
   - main
 
 pool:
-  vmImage: 'ubuntu-latest'  # Use a self-hosted Linux agent if needed
+  vmImage: 'localhost'  # Use a self-hosted Linux agent if needed
 
 steps:
   - script: |
-      sudo apt-get update
-      sudo apt-get install -y genisoimage xorriso
+      sudo dnf update
+      sudo dnf install -y genisoimage xorriso
 
       # Create a working directory
       sudo mkdir -p /iso/{EFI,BOOT,Packages,images,isolinux}
