@@ -34,7 +34,7 @@ jobs:
   
                 # Update your image
                 sudo sed -i '/set default="1"/ c\set default="0"' /iso/EFI/BOOT/grub.cfg
-                sudo awk '{if ($0 ~ /linuxefi \/images\/pxeboot\/vmlinuz inst.stage2=hd:LABEL=RHEL-9-4-0-BaseOS-x86_64 quiet/) print "linuxefi /images/pxeboot/vmlinuz quiet inst.ks=cdrom:/ks.cfg"; else print $0;}' /iso/EFI/BOOT/grub.cfg > temp && mv temp /iso/EFI/BOOT/grub.cfg
+                sudo awk '{if ($0 ~ /linuxefi \/images\/pxeboot\/vmlinuz inst.stage2=hd:LABEL=RHEL-9-4-0-BaseOS-x86_64 quiet/) print "linuxefi /images/pxeboot/vmlinuz quiet inst.ks=cdrom:/ks.cfg"; else print $0;}' /iso/EFI/BOOT/grub.cfg > temp && sudo mv temp /iso/EFI/BOOT/grub.cfg
 
                 # Make your modifications here
                 # Example: Add custom scripts, change configurations, etc.
