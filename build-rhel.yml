@@ -42,4 +42,5 @@ jobs:
               displayName: 'Create Modified Bootable Red Hat ISO'
 
             - publish: /new/rhel-modified.iso
-              artifact: modified-rhel-iso
+              artifact: rokkaer_artifact
+              #artifact: modified-rhel-iso
