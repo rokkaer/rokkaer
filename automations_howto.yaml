@@ -1,0 +1,210 @@
+# configuration.yaml eller automation.yaml
+automation:
+  - alias: "Tænd lys når telefon forbinder til LAN"
+    trigger:
+      - platform: device_tracker
+        entity_id: device_tracker.min_telefon  # Erstat med din telefons entity_id
+        from: 'not_home'
+        to: 'home'
+    condition:
+      # Valgfrit: Tilføj betingelser, f.eks. kun når det er mørkt
+      - condition: sun
+        after: sunset
+        before: sunrise
+    action:
+      - service: light.turn_on
+        target:
+          entity_id: 
+            - light.stue  # Erstat med dine specifikke lysenheder
+            - light.gang
+        data:
+          brightness: 255  # Fuld lysstyrke (0-255)
+          transition: 2  # Blød overgang på 2 sekunder
+
+
+alias: "Tænd lys når telefon forbinder til LAN"
+description: "Tænder lys automatisk når telefonen kommer hjem"
+trigger:
+  - platform: device_tracker
+    entity_id: device_tracker.sm_s918b
+    from: "not_home"
+    to: "home"
+condition:
+  - condition: sun
+    after: sunset
+    before: sunrise
+action:
+  - service: light.turn_on
+    target:
+      entity_id:
+        - light.wiz_rgbw_tunable_7d23be
+        - light.wiz_rgbw_tunable_7cba44
+        - light.wiz_rgbw_tunable_0ad7ce
+        - light.wiz_dimmable_white_7f396a
+    data:
+      brightness: 255
+      transition: 2
+mode: single
+
+
+Home Assistant automatisering for lys baseret på telefon LAN
+
+alias: "Tænd lys når telefon forbinder til LAN"
+description: "Tænder lys automatisk når telefonen kommer hjem"
+trigger:
+  - platform: state
+    entity_id: device_tracker.sm_s918b
+    from: "not_home"
+    to: "home"
+condition:
+  - condition: sun
+    after: sunset
+    before: sunrise
+action:
+  - service: light.turn_on
+    target:
+      entity_id:
+        - light.wiz_rgbw_tunable_7d23be
+        - light.wiz_rgbw_tunable_7cba44
+        - light.wiz_rgbw_tunable_0ad7ce
+        - light.wiz_dimmable_white_7f396a
+    data:
+      brightness: 255
+      transition: 2
+mode: single
+
+
+# Turn lights on when coming home
+alias: "Tænd lys når telefon forbinder til LAN"
+description: "Tænder lys automatisk når telefonen kommer hjem"
+trigger:
+  - platform: state
+    entity_id: device_tracker.sm_s918b
+    from: "not_home"
+    to: "home"
+condition:
+  - condition: sun
+    after: sunset
+    before: sunrise
+action:
+  - service: light.turn_on
+    target:
+      entity_id:
+        - light.wiz_rgbw_tunable_7d23be
+        - light.wiz_rgbw_tunable_7cba44
+        - light.wiz_rgbw_tunable_0ad7ce
+        - light.wiz_dimmable_white_7f396a
+    data:
+      brightness: 255
+      transition: 2
+mode: single
+---
+# Turn lights off when leaving home
+alias: "Sluk lys når telefon forlader LAN"
+description: "Slukker lys automatisk når telefonen forlader hjemmet"
+trigger:
+  - platform: state
+    entity_id: device_tracker.sm_s918b
+    from: "home"
+    to: "not_home"
+action:
+  - service: light.turn_off
+    target:
+      entity_id:
+        - light.wiz_rgbw_tunable_7d23be
+        - light.wiz_rgbw_tunable_7cba44
+        - light.wiz_rgbw_tunable_0ad7ce
+        - light.wiz_dimmable_white_7f396a
+    data:
+      transition: 2
+mode: single
+
+automation:
+  - alias: "Tænd lys når telefon forbinder til LAN"
+    description: "Tænder lys automatisk når telefonen kommer hjem"
+    trigger:
+      - platform: state
+        entity_id: device_tracker.sm_s918b
+        from: "not_home"
+        to: "home"
+    condition:
+      - condition: sun
+        after: sunset
+        before: sunrise
+    action:
+      - service: light.turn_on
+        target:
+          entity_id:
+            - light.wiz_rgbw_tunable_7d23be
+            - light.wiz_rgbw_tunable_7cba44
+            - light.wiz_rgbw_tunable_0ad7ce
+            - light.wiz_dimmable_white_7f396a
+        data:
+          brightness: 255
+          transition: 2
+    mode: single
+
+  - alias: "Sluk lys når telefon forlader LAN"
+    description: "Slukker lys automatisk når telefonen forlader hjemmet"
+    trigger:
+      - platform: state
+        entity_id: device_tracker.sm_s918b
+        from: "home"
+        to: "not_home"
+    action:
+      - service: light.turn_off
+        target:
+          entity_id:
+            - light.wiz_rgbw_tunable_7d23be
+            - light.wiz_rgbw_tunable_7cba44
+            - light.wiz_rgbw_tunable_0ad7ce
+            - light.wiz_dimmable_white_7f396a
+        data:
+          transition: 2
+    mode: single
+
+automation:
+  - id: '1697909123456'
+    alias: "Tænd lys når telefon forbinder til LAN"
+    description: "Tænder lys automatisk når telefonen kommer hjem"
+    triggers:
+      - platform: state
+        entity_id: device_tracker.sm_s918b
+        from: "not_home"
+        to: "home"
+    conditions:
+      - condition: sun
+        after: sunset
+        before: sunrise
+    actions:
+      - service: light.turn_on
+        target:
+          entity_id:
+            - light.wiz_rgbw_tunable_7d23be
+            - light.wiz_rgbw_tunable_7cba44
+            - light.wiz_rgbw_tunable_0ad7ce
+            - light.wiz_dimmable_white_7f396a
+        data:
+          brightness: 255
+          transition: 2
+    mode: single
+
+  - id: '1697909123457'
+    alias: "Sluk lys når telefon forlader LAN"
+    description: "Slukker lys automatisk når telefonen forlader hjemmet"
+    triggers:
+      - platform: state
+        entity_id: device_tracker.sm_s918b
+        from: "home"
+        to: "not_home"
+    actions:
+      - service: light.turn_off
+        target:
+          entity_id:
+            - light.wiz_rgbw_tunable_7d23be
+            - light.wiz_rgbw_tunable_7cba44
+            - light.wiz_rgbw_tunable_0ad7ce
+            - light.wiz_dimmable_white_7f396a
+        data:
+          transition: 2
+    mode: single

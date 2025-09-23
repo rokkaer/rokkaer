@@ -1,0 +1,21 @@
+# - sensor:
+#     - name: "Phone GPS Accuracy"
+#       state: >
+#         {{ state_attr('device_tracker.sm_s918b', 'gps_accuracy') | float(0) }}
+#       unit_of_measurement: "m"
+# 
+# - sensor:
+#     - name: "Weather Forecast Low Temperatures"
+#       state: >
+#         {{ state_attr('weather.forecast_home', 'temperature') }}
+#       attributes:
+#         temperatures: >
+#           {{ [
+#             state_attr('weather.forecast_home', 'temperature'),
+#             states('sensor.forecast_day1_temperature', 0) | float,
+#             states('sensor.forecast_day2_temperature', 0) | float,
+#             states('sensor.forecast_day3_temperature', 0) | float,
+#             states('sensor.forecast_day4_temperature', 0) | float,
+#             states('sensor.forecast_day5_temperature', 0) | float,
+#             states('sensor.forecast_day6_temperature', 0) | float
+#           ] }}

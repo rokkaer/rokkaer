@@ -1,0 +1,54 @@
+- id: '1736616931276'
+  alias: tester
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - device_tracker.sm_s918b
+    from: not_home
+    to: home
+  conditions: []
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    data: {}
+  mode: single
+- id: '1736617073343'
+  alias: tester
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - device_tracker.sm_s918b
+    from: not_home
+    to: home
+  conditions: []
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    data: {}
+  mode: single
+- id: '1736617393342'
+  alias: tester3
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - device_tracker.sm_s918b
+    from: not_home
+    to: home
+  conditions:
+  - condition: sun
+    before: sunrise
+    after: sunset
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    data: {}
+    target:
+      entity_id:
+      - light.wiz_rgbw_tunable_7d23be
+      - light.wiz_rgbw_tunable_7cba44
+      - light.wiz_rgbw_tunable_0ad7ce
+      - light.wiz_dimmable_white_7f396a
+  mode: single

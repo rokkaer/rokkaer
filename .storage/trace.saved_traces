@@ -1,0 +1,679 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "trace.saved_traces",
+  "data": {
+    "automation.1737292810511": [
+      {
+        "extended_dict": {
+          "last_step": "condition/0",
+          "run_id": "c25754e5c3bf86dc438ddaca7bf4e3a0",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2025-09-23T08:55:00.114302+00:00",
+            "finish": "2025-09-23T08:55:00.115419+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1737292810511",
+          "trigger": "time pattern",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2025-09-23T08:55:00.114494+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.met_no_freezing_temperature_warning",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1737292810511",
+                      "last_triggered": "2025-04-10T06:00:00.056788+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Met.no Freezing Temperature Warning"
+                    },
+                    "last_changed": "2025-09-23T08:31:00.226148+00:00",
+                    "last_reported": "2025-09-23T08:31:00.226148+00:00",
+                    "last_updated": "2025-09-23T08:31:00.226148+00:00",
+                    "context": {
+                      "id": "01K5TV53M24BGMR2S4RAZ5YJQJ",
+                      "parent_id": null,
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "time_pattern",
+                    "now": "2025-09-23T10:55:00.113540+02:00",
+                    "description": "time pattern"
+                  }
+                }
+              }
+            ],
+            "condition/0": [
+              {
+                "path": "condition/0",
+                "timestamp": "2025-09-23T08:55:00.114665+00:00",
+                "result": {
+                  "result": false,
+                  "entities": [
+                    "weather.forecast_home"
+                  ]
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1737292810511",
+            "alias": "Met.no Freezing Temperature Warning",
+            "description": "Warns when temperature will drop below 0\u00b0C in next 48 hours",
+            "triggers": [
+              {
+                "trigger": "time_pattern",
+                "minutes": "/5",
+                "hours": "/2"
+              }
+            ],
+            "conditions": [
+              {
+                "condition": "template",
+                "value_template": "{{ state_attr('weather.forecast_home', 'temperature') < 1 }}\n"
+              }
+            ],
+            "actions": [
+              {
+                "data": {
+                  "title": "\u2744\ufe0f Freezing Temperature Warning",
+                  "message": "Met.no forecasts temperatures below 0\u00b0C within the next 48 hours. Please prepare for freezing conditions: \u2022 Protect water pipes from freezing \u2022 Cover sensitive outdoor plants \u2022 Check heating system \u2022 Prepare winter clothing\n"
+                },
+                "action": "persistent_notification.create",
+                "enabled": false
+              },
+              {
+                "data": {
+                  "title": "\u2744\ufe0f Freezing Temperature Warning",
+                  "message": "Temperatures below 0\u00b0C expected within 48 hours"
+                },
+                "action": "notify.notify",
+                "enabled": false
+              },
+              {
+                "data": {
+                  "message": "Warns when temperature will drop below 0\u00b0C in next 48 hours",
+                  "title": "Freezing Temperature Warning"
+                },
+                "action": "notify.email"
+              },
+              {
+                "delay": {
+                  "hours": 2,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "enabled": true
+              }
+            ]
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01K5TWH1RJ1WS6890A11CMA7HS",
+            "parent_id": null,
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "condition/0",
+          "run_id": "c25754e5c3bf86dc438ddaca7bf4e3a0",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2025-09-23T08:55:00.114302+00:00",
+            "finish": "2025-09-23T08:55:00.115419+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1737292810511",
+          "trigger": "time pattern"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "condition/0",
+          "run_id": "6aadcb812e3ab0930f3e781020adf869",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2025-09-23T10:00:00.115065+00:00",
+            "finish": "2025-09-23T10:00:00.116349+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1737292810511",
+          "trigger": "time pattern",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2025-09-23T10:00:00.115324+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.met_no_freezing_temperature_warning",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1737292810511",
+                      "last_triggered": "2025-04-10T06:00:00.056788+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Met.no Freezing Temperature Warning"
+                    },
+                    "last_changed": "2025-09-23T08:31:00.226148+00:00",
+                    "last_reported": "2025-09-23T08:31:00.226148+00:00",
+                    "last_updated": "2025-09-23T08:31:00.226148+00:00",
+                    "context": {
+                      "id": "01K5TV53M24BGMR2S4RAZ5YJQJ",
+                      "parent_id": null,
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "time_pattern",
+                    "now": "2025-09-23T12:00:00.114238+02:00",
+                    "description": "time pattern"
+                  }
+                }
+              }
+            ],
+            "condition/0": [
+              {
+                "path": "condition/0",
+                "timestamp": "2025-09-23T10:00:00.115499+00:00",
+                "result": {
+                  "result": false,
+                  "entities": [
+                    "weather.forecast_home"
+                  ]
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1737292810511",
+            "alias": "Met.no Freezing Temperature Warning",
+            "description": "Warns when temperature will drop below 0\u00b0C in next 48 hours",
+            "triggers": [
+              {
+                "trigger": "time_pattern",
+                "minutes": "/5",
+                "hours": "/2"
+              }
+            ],
+            "conditions": [
+              {
+                "condition": "template",
+                "value_template": "{{ state_attr('weather.forecast_home', 'temperature') < 1 }}\n"
+              }
+            ],
+            "actions": [
+              {
+                "data": {
+                  "title": "\u2744\ufe0f Freezing Temperature Warning",
+                  "message": "Met.no forecasts temperatures below 0\u00b0C within the next 48 hours. Please prepare for freezing conditions: \u2022 Protect water pipes from freezing \u2022 Cover sensitive outdoor plants \u2022 Check heating system \u2022 Prepare winter clothing\n"
+                },
+                "action": "persistent_notification.create",
+                "enabled": false
+              },
+              {
+                "data": {
+                  "title": "\u2744\ufe0f Freezing Temperature Warning",
+                  "message": "Temperatures below 0\u00b0C expected within 48 hours"
+                },
+                "action": "notify.notify",
+                "enabled": false
+              },
+              {
+                "data": {
+                  "message": "Warns when temperature will drop below 0\u00b0C in next 48 hours",
+                  "title": "Freezing Temperature Warning"
+                },
+                "action": "notify.email"
+              },
+              {
+                "delay": {
+                  "hours": 2,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "enabled": true
+              }
+            ]
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01K5V082BJ681X30EFJN3XK9BZ",
+            "parent_id": null,
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "condition/0",
+          "run_id": "6aadcb812e3ab0930f3e781020adf869",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2025-09-23T10:00:00.115065+00:00",
+            "finish": "2025-09-23T10:00:00.116349+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1737292810511",
+          "trigger": "time pattern"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "condition/0",
+          "run_id": "11aa900a0239eab5f2f85a6c1f0f6589",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2025-09-23T10:05:00.115022+00:00",
+            "finish": "2025-09-23T10:05:00.116208+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1737292810511",
+          "trigger": "time pattern",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2025-09-23T10:05:00.115277+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.met_no_freezing_temperature_warning",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1737292810511",
+                      "last_triggered": "2025-04-10T06:00:00.056788+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Met.no Freezing Temperature Warning"
+                    },
+                    "last_changed": "2025-09-23T08:31:00.226148+00:00",
+                    "last_reported": "2025-09-23T08:31:00.226148+00:00",
+                    "last_updated": "2025-09-23T08:31:00.226148+00:00",
+                    "context": {
+                      "id": "01K5TV53M24BGMR2S4RAZ5YJQJ",
+                      "parent_id": null,
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "time_pattern",
+                    "now": "2025-09-23T12:05:00.114209+02:00",
+                    "description": "time pattern"
+                  }
+                }
+              }
+            ],
+            "condition/0": [
+              {
+                "path": "condition/0",
+                "timestamp": "2025-09-23T10:05:00.115450+00:00",
+                "result": {
+                  "result": false,
+                  "entities": [
+                    "weather.forecast_home"
+                  ]
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1737292810511",
+            "alias": "Met.no Freezing Temperature Warning",
+            "description": "Warns when temperature will drop below 0\u00b0C in next 48 hours",
+            "triggers": [
+              {
+                "trigger": "time_pattern",
+                "minutes": "/5",
+                "hours": "/2"
+              }
+            ],
+            "conditions": [
+              {
+                "condition": "template",
+                "value_template": "{{ state_attr('weather.forecast_home', 'temperature') < 1 }}\n"
+              }
+            ],
+            "actions": [
+              {
+                "data": {
+                  "title": "\u2744\ufe0f Freezing Temperature Warning",
+                  "message": "Met.no forecasts temperatures below 0\u00b0C within the next 48 hours. Please prepare for freezing conditions: \u2022 Protect water pipes from freezing \u2022 Cover sensitive outdoor plants \u2022 Check heating system \u2022 Prepare winter clothing\n"
+                },
+                "action": "persistent_notification.create",
+                "enabled": false
+              },
+              {
+                "data": {
+                  "title": "\u2744\ufe0f Freezing Temperature Warning",
+                  "message": "Temperatures below 0\u00b0C expected within 48 hours"
+                },
+                "action": "notify.notify",
+                "enabled": false
+              },
+              {
+                "data": {
+                  "message": "Warns when temperature will drop below 0\u00b0C in next 48 hours",
+                  "title": "Freezing Temperature Warning"
+                },
+                "action": "notify.email"
+              },
+              {
+                "delay": {
+                  "hours": 2,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "enabled": true
+              }
+            ]
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01K5V0H7AJ8T5A3EC69Z1ABMG4",
+            "parent_id": null,
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "condition/0",
+          "run_id": "11aa900a0239eab5f2f85a6c1f0f6589",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2025-09-23T10:05:00.115022+00:00",
+            "finish": "2025-09-23T10:05:00.116208+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1737292810511",
+          "trigger": "time pattern"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "condition/0",
+          "run_id": "8cfb728f1265ba1ef9ad5e8b2b87aa83",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2025-09-23T10:10:00.114529+00:00",
+            "finish": "2025-09-23T10:10:00.115742+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1737292810511",
+          "trigger": "time pattern",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2025-09-23T10:10:00.114810+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.met_no_freezing_temperature_warning",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1737292810511",
+                      "last_triggered": "2025-04-10T06:00:00.056788+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Met.no Freezing Temperature Warning"
+                    },
+                    "last_changed": "2025-09-23T08:31:00.226148+00:00",
+                    "last_reported": "2025-09-23T08:31:00.226148+00:00",
+                    "last_updated": "2025-09-23T08:31:00.226148+00:00",
+                    "context": {
+                      "id": "01K5TV53M24BGMR2S4RAZ5YJQJ",
+                      "parent_id": null,
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "time_pattern",
+                    "now": "2025-09-23T12:10:00.113730+02:00",
+                    "description": "time pattern"
+                  }
+                }
+              }
+            ],
+            "condition/0": [
+              {
+                "path": "condition/0",
+                "timestamp": "2025-09-23T10:10:00.114984+00:00",
+                "result": {
+                  "result": false,
+                  "entities": [
+                    "weather.forecast_home"
+                  ]
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1737292810511",
+            "alias": "Met.no Freezing Temperature Warning",
+            "description": "Warns when temperature will drop below 0\u00b0C in next 48 hours",
+            "triggers": [
+              {
+                "trigger": "time_pattern",
+                "minutes": "/5",
+                "hours": "/2"
+              }
+            ],
+            "conditions": [
+              {
+                "condition": "template",
+                "value_template": "{{ state_attr('weather.forecast_home', 'temperature') < 1 }}\n"
+              }
+            ],
+            "actions": [
+              {
+                "data": {
+                  "title": "\u2744\ufe0f Freezing Temperature Warning",
+                  "message": "Met.no forecasts temperatures below 0\u00b0C within the next 48 hours. Please prepare for freezing conditions: \u2022 Protect water pipes from freezing \u2022 Cover sensitive outdoor plants \u2022 Check heating system \u2022 Prepare winter clothing\n"
+                },
+                "action": "persistent_notification.create",
+                "enabled": false
+              },
+              {
+                "data": {
+                  "title": "\u2744\ufe0f Freezing Temperature Warning",
+                  "message": "Temperatures below 0\u00b0C expected within 48 hours"
+                },
+                "action": "notify.notify",
+                "enabled": false
+              },
+              {
+                "data": {
+                  "message": "Warns when temperature will drop below 0\u00b0C in next 48 hours",
+                  "title": "Freezing Temperature Warning"
+                },
+                "action": "notify.email"
+              },
+              {
+                "delay": {
+                  "hours": 2,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "enabled": true
+              }
+            ]
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01K5V0TC9J7EDCGKRJHQ4SCZ0E",
+            "parent_id": null,
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "condition/0",
+          "run_id": "8cfb728f1265ba1ef9ad5e8b2b87aa83",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2025-09-23T10:10:00.114529+00:00",
+            "finish": "2025-09-23T10:10:00.115742+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1737292810511",
+          "trigger": "time pattern"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "condition/0",
+          "run_id": "d27a7329062e6eeda0a8434f51f16354",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2025-09-23T10:15:00.113187+00:00",
+            "finish": "2025-09-23T10:15:00.114485+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1737292810511",
+          "trigger": "time pattern",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2025-09-23T10:15:00.113465+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.met_no_freezing_temperature_warning",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1737292810511",
+                      "last_triggered": "2025-04-10T06:00:00.056788+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Met.no Freezing Temperature Warning"
+                    },
+                    "last_changed": "2025-09-23T08:31:00.226148+00:00",
+                    "last_reported": "2025-09-23T08:31:00.226148+00:00",
+                    "last_updated": "2025-09-23T08:31:00.226148+00:00",
+                    "context": {
+                      "id": "01K5TV53M24BGMR2S4RAZ5YJQJ",
+                      "parent_id": null,
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "time_pattern",
+                    "now": "2025-09-23T12:15:00.112444+02:00",
+                    "description": "time pattern"
+                  }
+                }
+              }
+            ],
+            "condition/0": [
+              {
+                "path": "condition/0",
+                "timestamp": "2025-09-23T10:15:00.113717+00:00",
+                "result": {
+                  "result": false,
+                  "entities": [
+                    "weather.forecast_home"
+                  ]
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1737292810511",
+            "alias": "Met.no Freezing Temperature Warning",
+            "description": "Warns when temperature will drop below 0\u00b0C in next 48 hours",
+            "triggers": [
+              {
+                "trigger": "time_pattern",
+                "minutes": "/5",
+                "hours": "/2"
+              }
+            ],
+            "conditions": [
+              {
+                "condition": "template",
+                "value_template": "{{ state_attr('weather.forecast_home', 'temperature') < 1 }}\n"
+              }
+            ],
+            "actions": [
+              {
+                "data": {
+                  "title": "\u2744\ufe0f Freezing Temperature Warning",
+                  "message": "Met.no forecasts temperatures below 0\u00b0C within the next 48 hours. Please prepare for freezing conditions: \u2022 Protect water pipes from freezing \u2022 Cover sensitive outdoor plants \u2022 Check heating system \u2022 Prepare winter clothing\n"
+                },
+                "action": "persistent_notification.create",
+                "enabled": false
+              },
+              {
+                "data": {
+                  "title": "\u2744\ufe0f Freezing Temperature Warning",
+                  "message": "Temperatures below 0\u00b0C expected within 48 hours"
+                },
+                "action": "notify.notify",
+                "enabled": false
+              },
+              {
+                "data": {
+                  "message": "Warns when temperature will drop below 0\u00b0C in next 48 hours",
+                  "title": "Freezing Temperature Warning"
+                },
+                "action": "notify.email"
+              },
+              {
+                "delay": {
+                  "hours": 2,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "enabled": true
+              }
+            ]
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01K5V13H8HDVXW9WY9YWQ40DBX",
+            "parent_id": null,
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "condition/0",
+          "run_id": "d27a7329062e6eeda0a8434f51f16354",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2025-09-23T10:15:00.113187+00:00",
+            "finish": "2025-09-23T10:15:00.114485+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1737292810511",
+          "trigger": "time pattern"
+        }
+      }
+    ]
+  }
+}

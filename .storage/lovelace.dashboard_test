@@ -1,0 +1,210 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace.dashboard_test",
+  "data": {
+    "config": {
+      "views": [
+        {
+          "title": "Home",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "New section"
+                },
+                {
+                  "type": "media-control",
+                  "entity": "media_player.bedroom_tv"
+                },
+                {
+                  "type": "entities",
+                  "entities": [
+                    "update.simple_thermostat_update"
+                  ]
+                },
+                {
+                  "type": "entities",
+                  "entities": [
+                    "update.simple_thermostat_update"
+                  ]
+                }
+              ]
+            }
+          ],
+          "cards": [
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "sensor.ac_inside_temperature",
+                  "name": "Inside Temperature"
+                },
+                {
+                  "entity": "sensor.ac_outside_temperature",
+                  "name": "Outside Temperature"
+                }
+              ],
+              "title": "AC"
+            },
+            {
+              "type": "grid",
+              "square": false,
+              "columns": 1,
+              "cards": [
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "switch.ac_ai_eco",
+                      "name": "AI ECO"
+                    },
+                    {
+                      "entity": "switch.ac_econavi",
+                      "name": "ECONAVI"
+                    },
+                    {
+                      "entity": "select.ac_horizontal_swing_mode",
+                      "name": "Horizontal Swing Mode"
+                    },
+                    {
+                      "entity": "switch.ac_iauto_x",
+                      "name": "IAUTO-X"
+                    },
+                    {
+                      "entity": "switch.ac_nanoe",
+                      "name": "Nanoe"
+                    },
+                    {
+                      "entity": "select.ac_vertical_swing_mode",
+                      "name": "Vertical Swing Mode"
+                    }
+                  ],
+                  "title": "AC"
+                },
+                {
+                  "type": "thermostat",
+                  "entity": "climate.ac",
+                  "features": [
+                    {
+                      "type": "climate-hvac-modes",
+                      "hvac_modes": [
+                        "off",
+                        "heat_cool",
+                        "cool",
+                        "dry",
+                        "fan_only",
+                        "heat"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "entities",
+              "entities": [
+                "switch.wiz_socket_a0d70c"
+              ],
+              "title": "WiZ Socket A0D70C"
+            },
+            {
+              "type": "grid",
+              "square": false,
+              "columns": 1,
+              "cards": [
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "switch.ac_ai_eco",
+                      "name": "AI ECO"
+                    },
+                    {
+                      "entity": "switch.ac_econavi",
+                      "name": "ECONAVI"
+                    },
+                    {
+                      "entity": "select.ac_horizontal_swing_mode",
+                      "name": "Horizontal Swing Mode"
+                    },
+                    {
+                      "entity": "switch.ac_iauto_x",
+                      "name": "IAUTO-X"
+                    },
+                    {
+                      "entity": "switch.ac_nanoe",
+                      "name": "Nanoe"
+                    },
+                    {
+                      "entity": "select.ac_vertical_swing_mode",
+                      "name": "Vertical Swing Mode"
+                    }
+                  ],
+                  "title": "AC"
+                },
+                {
+                  "type": "thermostat",
+                  "entity": "climate.ac",
+                  "features": [
+                    {
+                      "type": "climate-hvac-modes",
+                      "hvac_modes": [
+                        "off",
+                        "heat_cool",
+                        "cool",
+                        "dry",
+                        "fan_only",
+                        "heat"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "square": false,
+              "columns": 1,
+              "cards": [
+                {
+                  "type": "entities",
+                  "entities": [
+                    "remote.stue_tv"
+                  ],
+                  "title": "Stue TV"
+                },
+                {
+                  "type": "media-control",
+                  "entity": "media_player.stue_tv_2"
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "square": false,
+              "columns": 1,
+              "cards": [
+                {
+                  "type": "entities",
+                  "entities": [
+                    "remote.stue_tv"
+                  ],
+                  "title": "Stue TV"
+                },
+                {
+                  "type": "media-control",
+                  "entity": "media_player.stue_tv_2"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "url": "/docker/www/community/simple-thermostat/simple-thermostat.js",
+      "type": "module"
+    }
+  }
+}

@@ -1,0 +1,484 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "core.restore_state",
+  "data": [
+    {
+      "state": {"entity_id":"conversation.home_assistant","state":"unknown","attributes":{"friendly_name":"Home Assistant","supported_features":1},"last_changed":"2025-09-23T10:19:39.054633+00:00","last_reported":"2025-09-23T10:19:39.054633+00:00","last_updated":"2025-09-23T10:19:39.054633+00:00","context":{"id":"01K5V1C1NE0K7FR487JN14B1SW","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"event.backup_automatic_backup","state":"2025-09-23T03:21:42.653+00:00","attributes":{"event_types":["completed","failed","in_progress"],"event_type":"completed","backup_stage":null,"failed_reason":null,"friendly_name":"Backup Automatic backup"},"last_changed":"2025-09-23T10:19:39.185444+00:00","last_reported":"2025-09-23T10:19:39.185444+00:00","last_updated":"2025-09-23T10:19:39.185444+00:00","context":{"id":"01K5V1C1SHTZ7EFVC9QQ024MSF","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "completed",
+        "last_event_attributes": {
+          "backup_stage": null,
+          "failed_reason": null
+        }
+      },
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"scene.on_off_lys","state":"2025-02-22T07:59:49.010135+00:00","attributes":{"entity_id":["light.wiz_rgbw_tunable_7d23be","light.wiz_rgbw_tunable_7cba44","light.wiz_rgbw_tunable_0ad7ce","light.wiz_dimmable_white_7f396a"],"id":"1740210633977","friendly_name":"On off lys"},"last_changed":"2025-09-23T10:19:41.051656+00:00","last_reported":"2025-09-23T10:19:41.051656+00:00","last_updated":"2025-09-23T10:19:41.051656+00:00","context":{"id":"01K5V1C3KVN2Z4CGB4A8SW4JYM","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"script.sluk","state":"off","attributes":{"last_triggered":"2025-09-22T20:24:02.751032+00:00","mode":"single","current":0,"friendly_name":"Godnat"},"last_changed":"2025-09-23T10:19:41.167353+00:00","last_reported":"2025-09-23T10:19:41.167353+00:00","last_updated":"2025-09-23T10:19:41.167353+00:00","context":{"id":"01K5V1C3QF783X344FGPE2TVTB","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"script.tand","state":"off","attributes":{"last_triggered":null,"mode":"single","current":0,"friendly_name":"Tænd"},"last_changed":"2025-09-23T10:19:41.168001+00:00","last_reported":"2025-09-23T10:19:41.168001+00:00","last_updated":"2025-09-23T10:19:41.168001+00:00","context":{"id":"01K5V1C3QGC0BF855F9J11B4CW","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"script.sluk_stoj","state":"off","attributes":{"last_triggered":"2025-02-22T19:10:00.316018+00:00","mode":"single","current":0,"friendly_name":"Sluk støj"},"last_changed":"2025-09-23T10:19:41.169036+00:00","last_reported":"2025-09-23T10:19:41.169036+00:00","last_updated":"2025-09-23T10:19:41.169036+00:00","context":{"id":"01K5V1C3QHTJ2VTGC5ED3G6GCN","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"script.lys_stue_tand","state":"off","attributes":{"last_triggered":null,"mode":"single","current":0,"friendly_name":"Lys stue tænd"},"last_changed":"2025-09-23T10:19:41.169688+00:00","last_reported":"2025-09-23T10:19:41.169688+00:00","last_updated":"2025-09-23T10:19:41.169688+00:00","context":{"id":"01K5V1C3QHEGEVZWZ0JXJM28Y7","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"input_button.knap","state":"unknown","attributes":{"editable":true,"friendly_name":"Knap"},"last_changed":"2025-09-23T10:19:41.204373+00:00","last_reported":"2025-09-23T10:19:41.204373+00:00","last_updated":"2025-09-23T10:19:41.204373+00:00","context":{"id":"01K5V1C3RM2QWTWFMT547VAZ0M","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"input_button.tester","state":"unknown","attributes":{"editable":true,"friendly_name":"Tester"},"last_changed":"2025-09-23T10:19:41.204919+00:00","last_reported":"2025-09-23T10:19:41.204919+00:00","last_updated":"2025-09-23T10:19:41.204919+00:00","context":{"id":"01K5V1C3RMD3VFMTYD3D0SX83B","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"person.mrj_track","state":"home","attributes":{"editable":false,"id":"mrj_track","device_trackers":["device_tracker.mikkel_s_s23_ultra"],"latitude":55.91506290840837,"longitude":11.919516921719575,"source":"person.mrj_track","friendly_name":"mrj_track"},"last_changed":"2025-09-23T10:19:41.220827+00:00","last_reported":"2025-09-23T10:19:41.220827+00:00","last_updated":"2025-09-23T10:19:41.220827+00:00","context":{"id":"01K5V1C3S4YKQP553J785MH17C","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"person.mrj","state":"home","attributes":{"editable":true,"id":"mrj","device_trackers":["device_tracker.sm_s918b"],"latitude":55.9150253,"longitude":11.919751,"gps_accuracy":100,"source":"person.mrj","user_id":"5cb3d29710b54e27816bbd8bf7ecb3fb","friendly_name":"mrj"},"last_changed":"2025-09-23T10:19:41.223107+00:00","last_reported":"2025-09-23T10:19:41.223107+00:00","last_updated":"2025-09-23T10:19:41.223107+00:00","context":{"id":"01K5V1C3S7E8DAG1YM3R0HKR4R","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"person.mia","state":"home","attributes":{"editable":true,"id":"mia","device_trackers":["device_tracker.mia_iphone"],"latitude":55.915082718804456,"longitude":11.91968289327479,"gps_accuracy":7,"source":"person.mia","user_id":"52ca2bed7062417d827cbca04263f83c","friendly_name":"mia"},"last_changed":"2025-09-23T10:19:41.224139+00:00","last_reported":"2025-09-23T10:19:41.224139+00:00","last_updated":"2025-09-23T10:19:41.224139+00:00","context":{"id":"01K5V1C3S8H822CW25WY43305S","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"person.nanna","state":"unknown","attributes":{"editable":true,"id":"nanna","device_trackers":[],"source":"person.nanna","user_id":"0f883cb9833b410699278c704f87c62a","friendly_name":"nanna"},"last_changed":"2025-09-23T10:19:41.225041+00:00","last_reported":"2025-09-23T10:19:41.225041+00:00","last_updated":"2025-09-23T10:19:41.225041+00:00","context":{"id":"01K5V1C3S9BXR3B0F63CA3ATKV","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"binary_sensor.mia_iphone_focus","state":"off","attributes":{"icon":"mdi:moon-waning-crescent","friendly_name":"Mia - iPhone Focus"},"last_changed":"2025-09-23T10:19:53.387378+00:00","last_reported":"2025-09-23T10:19:53.387378+00:00","last_updated":"2025-09-23T10:19:53.387378+00:00","context":{"id":"01K5V1CFNBMQ8ACKF69FDVXTW1","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"device_tracker.mia_iphone","state":"home","attributes":{"source_type":"gps","battery_level":30,"latitude":55.915082718804456,"longitude":11.91968289327479,"gps_accuracy":7,"altitude":10.81,"vertical_accuracy":30,"friendly_name":"Mia - iPhone","zone_check_min_gps_accuracy":100},"last_changed":"2025-09-23T10:19:53.389891+00:00","last_reported":"2025-09-23T10:19:53.389891+00:00","last_updated":"2025-09-23T10:19:53.389891+00:00","context":{"id":"01K5V1CFNDBFQRFDBJ0TMGTVE6","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.mia_iphone_battery_level","state":"30","attributes":{"unit_of_measurement":"%","device_class":"battery","icon":"mdi:battery-30","friendly_name":"Mia - iPhone Battery Level"},"last_changed":"2025-09-23T10:19:53.394447+00:00","last_reported":"2025-09-23T10:19:53.394447+00:00","last_updated":"2025-09-23T10:19:53.394447+00:00","context":{"id":"01K5V1CFNJAMD2S3PFPB77V948","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 30,
+        "native_unit_of_measurement": "%"
+      },
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.mia_iphone_storage","state":"16.97","attributes":{"Available":"9,76 GB","Available (Important)":"15,13 GB","Available (Opportunistic)":"10,85 GB","Total":"63,93 GB","unit_of_measurement":"% available","icon":"mdi:database","friendly_name":"Mia - iPhone Storage"},"last_changed":"2025-09-23T10:19:53.395849+00:00","last_reported":"2025-09-23T10:19:53.395849+00:00","last_updated":"2025-09-23T10:19:53.395849+00:00","context":{"id":"01K5V1CFNKN1NDDW2KABN8K4P4","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "16.97",
+        "native_unit_of_measurement": "% available"
+      },
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.mia_iphone_battery_state","state":"Not Charging","attributes":{"Low Power Mode":false,"icon":"mdi:battery-30","friendly_name":"Mia - iPhone Battery State"},"last_changed":"2025-09-23T10:19:53.396897+00:00","last_reported":"2025-09-23T10:19:53.396897+00:00","last_updated":"2025-09-23T10:19:53.396897+00:00","context":{"id":"01K5V1CFNMVEC8H8MGEH6B4V0P","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "Not Charging",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.mia_iphone_sim_1","state":"--","attributes":{"Allows VoIP":true,"Carrier ID":"0000000100000001","Carrier Name":"--","Current Radio Technology":"Long-Term Evolution (LTE)","ISO Country Code":"--","Mobile Country Code":"65535","Mobile Network Code":"65535","icon":"mdi:sim","friendly_name":"Mia - iPhone SIM 1"},"last_changed":"2025-09-23T10:19:53.397835+00:00","last_reported":"2025-09-23T10:19:53.397835+00:00","last_updated":"2025-09-23T10:19:53.397835+00:00","context":{"id":"01K5V1CFNND25AEMZN5RX6J60Y","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "--",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.mia_iphone_ssid","state":"Not Connected","attributes":{"icon":"mdi:wifi-off","friendly_name":"Mia - iPhone SSID"},"last_changed":"2025-09-23T10:19:53.398681+00:00","last_reported":"2025-09-23T10:19:53.398681+00:00","last_updated":"2025-09-23T10:19:53.398681+00:00","context":{"id":"01K5V1CFNP4ND9V6E7CF602RRR","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "Not Connected",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.mia_iphone_sim_2","state":"--","attributes":{"Allows VoIP":true,"Carrier ID":"0000000100000002","Carrier Name":"--","ISO Country Code":"--","Mobile Country Code":"65535","Mobile Network Code":"65535","icon":"mdi:sim","friendly_name":"Mia - iPhone SIM 2"},"last_changed":"2025-09-23T10:19:53.399525+00:00","last_reported":"2025-09-23T10:19:53.399525+00:00","last_updated":"2025-09-23T10:19:53.399525+00:00","context":{"id":"01K5V1CFNQW77KDAWXH951V88A","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "--",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.mia_iphone_geocoded_location","state":"Ringvej 4\n3630 Jægerspris\nDanmark","attributes":{"Administrative Area":"Region Hovedstaden","Areas Of Interest":["Sjælland"],"Country":"Danmark","Inland Water":"N/A","ISO Country Code":"DK","Locality":"Jægerspris","Location":[55.91508183655537,11.919688737850763],"Name":"Ringvej 4","Ocean":"N/A","Postal Code":"3630","Sub Administrative Area":"Frederikssund","Sub Locality":"Kulhuse","Sub Thoroughfare":"4","Thoroughfare":"Ringvej","Time Zone":"Europe/Copenhagen","Zones":["copenhagen"],"icon":"mdi:map","friendly_name":"Mia - iPhone Geocoded Location"},"last_changed":"2025-09-23T10:19:53.403353+00:00","last_reported":"2025-09-23T10:19:53.403353+00:00","last_updated":"2025-09-23T10:19:53.403353+00:00","context":{"id":"01K5V1CFNVJNJJBETZN0D9NEQX","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "Ringvej 4\n3630 Jægerspris\nDanmark",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.mia_iphone_last_update_trigger","state":"Signaled","attributes":{"icon":"mdi:cellphone-wireless","friendly_name":"Mia - iPhone Last Update Trigger"},"last_changed":"2025-09-23T10:19:53.404431+00:00","last_reported":"2025-09-23T10:19:53.404431+00:00","last_updated":"2025-09-23T10:19:53.404431+00:00","context":{"id":"01K5V1CFNW32XHN920C3ENTEM9","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "Signaled",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.mia_iphone_bssid","state":"Not Connected","attributes":{"icon":"mdi:wifi-off","friendly_name":"Mia - iPhone BSSID"},"last_changed":"2025-09-23T10:19:53.405263+00:00","last_reported":"2025-09-23T10:19:53.405263+00:00","last_updated":"2025-09-23T10:19:53.405263+00:00","context":{"id":"01K5V1CFNXSRZNCVTHGA2CZKE2","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "Not Connected",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.mia_iphone_connection_type","state":"Wi-Fi","attributes":{"icon":"mdi:wifi","friendly_name":"Mia - iPhone Connection Type"},"last_changed":"2025-09-23T10:19:53.406354+00:00","last_reported":"2025-09-23T10:19:53.406354+00:00","last_updated":"2025-09-23T10:19:53.406354+00:00","context":{"id":"01K5V1CFNYQMMC2EKGE00Z9BH0","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "Wi-Fi",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.mia_iphone_app_version","state":"2025.7.2","attributes":{"icon":"mdi:cellphone","friendly_name":"Mia - iPhone App Version"},"last_changed":"2025-09-23T10:19:53.407506+00:00","last_reported":"2025-09-23T10:19:53.407506+00:00","last_updated":"2025-09-23T10:19:53.407506+00:00","context":{"id":"01K5V1CFNZAYF9W9MGBJQ3CKNT","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "2025.7.2",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.mia_iphone_location_permission","state":"Authorized Always","attributes":{"icon":"mdi:map","friendly_name":"Mia - iPhone Location permission"},"last_changed":"2025-09-23T10:19:53.408782+00:00","last_reported":"2025-09-23T10:19:53.408782+00:00","last_updated":"2025-09-23T10:19:53.408782+00:00","context":{"id":"01K5V1CFP0B9R22PN9NJCD5FSW","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "Authorized Always",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.mia_iphone_audio_output","state":"Built-in Speaker","attributes":{"icon":"mdi:volume-high","friendly_name":"Mia - iPhone Audio Output"},"last_changed":"2025-09-23T10:19:53.412437+00:00","last_reported":"2025-09-23T10:19:53.412437+00:00","last_updated":"2025-09-23T10:19:53.412437+00:00","context":{"id":"01K5V1CFP46VG63CHK9FWET1BD","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "Built-in Speaker",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.mia_iphone_activity","state":"Automotive","attributes":{"Confidence":"High","Types":["Automotive"],"icon":"mdi:car","friendly_name":"Mia - iPhone Activity"},"last_changed":"2025-09-23T10:19:53.414015+00:00","last_reported":"2025-09-23T10:19:53.414015+00:00","last_updated":"2025-09-23T10:19:53.414015+00:00","context":{"id":"01K5V1CFP6AM80NEC5KG3V91AJ","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "Automotive",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.mia_iphone_floors_ascended","state":"0","attributes":{"unit_of_measurement":"floors","icon":"mdi:stairs-up","friendly_name":"Mia - iPhone Floors Ascended"},"last_changed":"2025-09-23T10:19:53.415220+00:00","last_reported":"2025-09-23T10:19:53.415220+00:00","last_updated":"2025-09-23T10:19:53.415220+00:00","context":{"id":"01K5V1CFP7VMFYCT6J85046BE0","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 0,
+        "native_unit_of_measurement": "floors"
+      },
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.mia_iphone_floors_descended","state":"0","attributes":{"unit_of_measurement":"floors","icon":"mdi:stairs-down","friendly_name":"Mia - iPhone Floors Descended"},"last_changed":"2025-09-23T10:19:53.416244+00:00","last_reported":"2025-09-23T10:19:53.416244+00:00","last_updated":"2025-09-23T10:19:53.416244+00:00","context":{"id":"01K5V1CFP8DTXQAX3QWKA0V6PQ","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 0,
+        "native_unit_of_measurement": "floors"
+      },
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.mia_iphone_distance","state":"54","attributes":{"unit_of_measurement":"m","icon":"mdi:hiking","friendly_name":"Mia - iPhone Distance"},"last_changed":"2025-09-23T10:19:53.417216+00:00","last_reported":"2025-09-23T10:19:53.417216+00:00","last_updated":"2025-09-23T10:19:53.417216+00:00","context":{"id":"01K5V1CFP9XF1CXXDV2E1PSYM6","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 54,
+        "native_unit_of_measurement": "m"
+      },
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.mia_iphone_steps","state":"83","attributes":{"unit_of_measurement":"steps","icon":"mdi:walk","friendly_name":"Mia - iPhone Steps"},"last_changed":"2025-09-23T10:19:53.418320+00:00","last_reported":"2025-09-23T10:19:53.418320+00:00","last_updated":"2025-09-23T10:19:53.418320+00:00","context":{"id":"01K5V1CFPAFC32PTQ1SZQVY9BR","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 83,
+        "native_unit_of_measurement": "steps"
+      },
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.mia_iphone_average_active_pace","state":"2","attributes":{"unit_of_measurement":"m/s","icon":"mdi:speedometer","friendly_name":"Mia - iPhone Average Active Pace"},"last_changed":"2025-09-23T10:19:53.419438+00:00","last_reported":"2025-09-23T10:19:53.419438+00:00","last_updated":"2025-09-23T10:19:53.419438+00:00","context":{"id":"01K5V1CFPB777ANWEC2J6D5EFG","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 2,
+        "native_unit_of_measurement": "m/s"
+      },
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"device_tracker.sm_s918b","state":"home","attributes":{"source_type":"gps","latitude":55.9150253,"longitude":11.919751,"gps_accuracy":100,"altitude":53.0,"course":0,"speed":0,"vertical_accuracy":100,"friendly_name":"SM-S918B"},"last_changed":"2025-09-23T10:19:53.423071+00:00","last_reported":"2025-09-23T10:19:53.423071+00:00","last_updated":"2025-09-23T10:19:53.423071+00:00","context":{"id":"01K5V1CFPFJT52PE7592N64CEV","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.sm_s918b_battery_level","state":"100","attributes":{"state_class":"measurement","unit_of_measurement":"%","device_class":"battery","icon":"mdi:battery-charging","friendly_name":"SM-S918B Battery level"},"last_changed":"2025-09-23T10:19:53.425693+00:00","last_reported":"2025-09-23T10:19:53.425693+00:00","last_updated":"2025-09-23T10:19:53.425693+00:00","context":{"id":"01K5V1CFPHBE142YCDS0QDPFB1","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 100,
+        "native_unit_of_measurement": "%"
+      },
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.sm_s918b_battery_state","state":"full","attributes":{"options":["charging","discharging","full","not_charging"],"device_class":"enum","icon":"mdi:battery-charging","friendly_name":"SM-S918B Battery state"},"last_changed":"2025-09-23T10:19:53.426681+00:00","last_reported":"2025-09-23T10:19:53.426681+00:00","last_updated":"2025-09-23T10:19:53.426681+00:00","context":{"id":"01K5V1CFPJXR0ART5CYYVDBYKH","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "full",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.sm_s918b_charger_type","state":"ac","attributes":{"options":["ac","usb","wireless","dock","none"],"device_class":"enum","icon":"mdi:power-plug","friendly_name":"SM-S918B Charger type"},"last_changed":"2025-09-23T10:19:53.427544+00:00","last_reported":"2025-09-23T10:19:53.427544+00:00","last_updated":"2025-09-23T10:19:53.427544+00:00","context":{"id":"01K5V1CFPKHV7EJVQ96CEAS5K8","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "ac",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"button.ac_fetch_latest_app_version","state":"unknown","attributes":{"icon":"mdi:refresh","friendly_name":"AC Fetch latest app version"},"last_changed":"2025-09-23T10:19:54.638505+00:00","last_reported":"2025-09-23T10:19:54.638505+00:00","last_updated":"2025-09-23T10:19:54.638505+00:00","context":{"id":"01K5V1CGWEKFGKWA1V7214TGBY","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"button.ac_fetch_latest_data","state":"unknown","attributes":{"icon":"mdi:update","friendly_name":"AC Fetch latest data"},"last_changed":"2025-09-23T10:19:54.639393+00:00","last_reported":"2025-09-23T10:19:54.639393+00:00","last_updated":"2025-09-23T10:19:54.639393+00:00","context":{"id":"01K5V1CGWF8C9RNMNZE9VMXD3Z","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"update.google_assistant_sdk_custom_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v0.1.4","in_progress":false,"latest_version":"v0.1.4","release_summary":null,"release_url":"https://github.com/tronikos/google_assistant_sdk_custom/releases/v0.1.4","skipped_version":null,"title":null,"update_percentage":null,"entity_picture":"https://brands.home-assistant.io/_/google_assistant_sdk_custom/icon.png","friendly_name":"Google Assistant SDK Custom update","supported_features":23},"last_changed":"2025-09-23T10:19:55.323085+00:00","last_reported":"2025-09-23T10:19:55.323085+00:00","last_updated":"2025-09-23T10:19:55.323085+00:00","context":{"id":"01K5V1CHHVRCMPGW2XSM8MJD3E","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"update.tuya_local_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"2025.9.0","in_progress":false,"latest_version":"2025.9.0","release_summary":null,"release_url":"https://github.com/make-all/tuya-local/releases/2025.9.0","skipped_version":null,"title":null,"update_percentage":null,"entity_picture":"https://brands.home-assistant.io/_/tuya_local/icon.png","friendly_name":"Tuya Local update","supported_features":23},"last_changed":"2025-09-23T10:19:55.324159+00:00","last_reported":"2025-09-23T10:19:55.324159+00:00","last_updated":"2025-09-23T10:19:55.324159+00:00","context":{"id":"01K5V1CHHW3ZDX314C9Y41Q3W4","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"update.weather_radar_card_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v2.1.0","in_progress":false,"latest_version":"v2.1.0","release_summary":null,"release_url":"https://github.com/Makin-Things/weather-radar-card/releases/v2.1.0","skipped_version":null,"title":null,"update_percentage":null,"friendly_name":"Weather Radar Card update","supported_features":23},"last_changed":"2025-09-23T10:19:55.325019+00:00","last_reported":"2025-09-23T10:19:55.325019+00:00","last_updated":"2025-09-23T10:19:55.325019+00:00","context":{"id":"01K5V1CHHXN1QPQ5C52E0S3395","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"update.hacs_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"2.0.5","in_progress":false,"latest_version":"2.0.5","release_summary":null,"release_url":"https://github.com/hacs/integration/releases/2.0.5","skipped_version":null,"title":null,"update_percentage":null,"entity_picture":"https://brands.home-assistant.io/_/hacs/icon.png","friendly_name":"HACS update","supported_features":23},"last_changed":"2025-09-23T10:19:55.325901+00:00","last_reported":"2025-09-23T10:19:55.325901+00:00","last_updated":"2025-09-23T10:19:55.325901+00:00","context":{"id":"01K5V1CHHXFC955HX964ZFRWQ4","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"update.ui_lovelace_minimalist_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v1.3.18","in_progress":false,"latest_version":"v1.3.18","release_summary":null,"release_url":"https://github.com/UI-Lovelace-Minimalist/UI/releases/v1.3.18","skipped_version":null,"title":null,"update_percentage":null,"entity_picture":"https://brands.home-assistant.io/_/ui_lovelace_minimalist/icon.png","friendly_name":"UI Lovelace Minimalist update","supported_features":23},"last_changed":"2025-09-23T10:19:55.326702+00:00","last_reported":"2025-09-23T10:19:55.326702+00:00","last_updated":"2025-09-23T10:19:55.326702+00:00","context":{"id":"01K5V1CHHY1HG5VVT9FYJJVWDR","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"update.asusrouter_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"0.40.1","in_progress":false,"latest_version":"0.40.1","release_summary":null,"release_url":"https://github.com/Vaskivskyi/ha-asusrouter/releases/0.40.1","skipped_version":null,"title":null,"update_percentage":null,"entity_picture":"https://brands.home-assistant.io/_/asusrouter/icon.png","friendly_name":"AsusRouter update","supported_features":23},"last_changed":"2025-09-23T10:19:55.327617+00:00","last_reported":"2025-09-23T10:19:55.327617+00:00","last_updated":"2025-09-23T10:19:55.327617+00:00","context":{"id":"01K5V1CHHZ6DV5KYQESP809FRB","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"update.panasonic_comfort_cloud_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"2025.5.0","in_progress":false,"latest_version":"2025.5.0","release_summary":null,"release_url":"https://github.com/sockless-coding/panasonic_cc/releases/2025.5.0","skipped_version":null,"title":null,"update_percentage":null,"entity_picture":"https://brands.home-assistant.io/_/panasonic_cc/icon.png","friendly_name":"Panasonic Comfort Cloud update","supported_features":23},"last_changed":"2025-09-23T10:19:55.328596+00:00","last_reported":"2025-09-23T10:19:55.328596+00:00","last_updated":"2025-09-23T10:19:55.328596+00:00","context":{"id":"01K5V1CHJ0AZ6Y3VF6BRAMA8FT","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"update.simple_thermostat_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v2.5.0","in_progress":false,"latest_version":"v2.5.0","release_summary":null,"release_url":"https://github.com/nervetattoo/simple-thermostat/releases/v2.5.0","skipped_version":null,"title":null,"update_percentage":null,"friendly_name":"Simple Thermostat update","supported_features":23},"last_changed":"2025-09-23T10:19:55.329465+00:00","last_reported":"2025-09-23T10:19:55.329465+00:00","last_updated":"2025-09-23T10:19:55.329465+00:00","context":{"id":"01K5V1CHJ1J5B1RKGQ94H9NJPX","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.taend_lys_ved_ankomst","state":"off","attributes":{"id":"1737202380818","last_triggered":"2025-02-19T18:23:00.399494+00:00","mode":"single","current":0,"friendly_name":"Tænd lys ved ankomst new"},"last_changed":"2025-09-23T10:19:56.409483+00:00","last_reported":"2025-09-23T10:19:56.409483+00:00","last_updated":"2025-09-23T10:19:56.409483+00:00","context":{"id":"01K5V1CJKSK1SVPP6PRJPZ0E8C","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.sluk_ved_afrejse","state":"on","attributes":{"id":"1737202462573","last_triggered":"2025-09-04T05:18:34.203315+00:00","mode":"single","current":0,"friendly_name":"Sluk ved afrejse"},"last_changed":"2025-09-23T10:19:56.410424+00:00","last_reported":"2025-09-23T10:19:56.410424+00:00","last_updated":"2025-09-23T10:19:56.410424+00:00","context":{"id":"01K5V1CJKTK82RC5G0E0RX84E8","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.roomba_clean","state":"off","attributes":{"id":"1737219079532","last_triggered":"2025-03-21T15:43:48.299426+00:00","mode":"single","current":0,"friendly_name":"Roomba clean defunct"},"last_changed":"2025-09-23T10:19:56.411072+00:00","last_reported":"2025-09-23T10:19:56.411072+00:00","last_updated":"2025-09-23T10:19:56.411072+00:00","context":{"id":"01K5V1CJKV9R7D886BZSCM59N3","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.play_youtube","state":"off","attributes":{"id":"1737222392465","last_triggered":"2025-01-19T12:23:10.033277+00:00","mode":"single","current":0,"friendly_name":"Play music bedroom tv"},"last_changed":"2025-09-23T10:19:56.411615+00:00","last_reported":"2025-09-23T10:19:56.411615+00:00","last_updated":"2025-09-23T10:19:56.411615+00:00","context":{"id":"01K5V1CJKVB0VDAH16RV03Q80W","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.youtube_on_livingroom_tv","state":"off","attributes":{"id":"1737223589551","last_triggered":"2025-02-01T14:35:27.982809+00:00","mode":"single","current":0,"friendly_name":"Musik on Google nest"},"last_changed":"2025-09-23T10:19:56.412153+00:00","last_reported":"2025-09-23T10:19:56.412153+00:00","last_updated":"2025-09-23T10:19:56.412153+00:00","context":{"id":"01K5V1CJKW20JBWYF5J1E69HCV","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.met_no_freezing_temperature_warning","state":"on","attributes":{"id":"1737292810511","last_triggered":"2025-04-10T06:00:00.056788+00:00","mode":"single","current":0,"friendly_name":"Met.no Freezing Temperature Warning"},"last_changed":"2025-09-23T10:19:56.412797+00:00","last_reported":"2025-09-23T10:19:56.412797+00:00","last_updated":"2025-09-23T10:19:56.412797+00:00","context":{"id":"01K5V1CJKW8K024PQJ9ZSKN5WS","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.morgenrutine","state":"off","attributes":{"id":"1737325852151","last_triggered":"2025-04-30T03:30:00.243297+00:00","mode":"single","current":0,"friendly_name":"Morgenrutine"},"last_changed":"2025-09-23T10:19:56.413317+00:00","last_reported":"2025-09-23T10:19:56.413317+00:00","last_updated":"2025-09-23T10:19:56.413317+00:00","context":{"id":"01K5V1CJKXZV0X9N8JAXRNGM58","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.ac_weekend_taend","state":"off","attributes":{"id":"1737757373932","last_triggered":"2025-04-20T06:00:00.196652+00:00","mode":"single","current":0,"friendly_name":"Ac weekend tænd"},"last_changed":"2025-09-23T10:19:56.413913+00:00","last_reported":"2025-09-23T10:19:56.413913+00:00","last_updated":"2025-09-23T10:19:56.413913+00:00","context":{"id":"01K5V1CJKXVZDDPBGWW9GB0HYT","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.test_temp","state":"off","attributes":{"id":"1739011669385","last_triggered":"2025-02-15T16:13:54.854914+00:00","mode":"single","current":0,"friendly_name":"Cold Weather Alert"},"last_changed":"2025-09-23T10:19:56.414441+00:00","last_reported":"2025-09-23T10:19:56.414441+00:00","last_updated":"2025-09-23T10:19:56.414441+00:00","context":{"id":"01K5V1CJKYVSF55V1RQMYRWY9M","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.shelly_h_t_data_receiver","state":"off","attributes":{"id":"1739699926921","last_triggered":"2025-02-16T10:17:49.297355+00:00","mode":"single","current":0,"friendly_name":"Shelly H&T Data Receiver"},"last_changed":"2025-09-23T10:19:56.414960+00:00","last_reported":"2025-09-23T10:19:56.414960+00:00","last_updated":"2025-09-23T10:19:56.414960+00:00","context":{"id":"01K5V1CJKY25AQKMAESCMFPJQR","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.taend_lys_ved_ankomst_2","state":"on","attributes":{"id":"1739989416397","last_triggered":"2025-08-16T18:49:57.900761+00:00","mode":"single","current":0,"friendly_name":"Tænd lys ved ankomst"},"last_changed":"2025-09-23T10:19:56.415563+00:00","last_reported":"2025-09-23T10:19:56.415563+00:00","last_updated":"2025-09-23T10:19:56.415563+00:00","context":{"id":"01K5V1CJKZDZTXXRAKQG529R36","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.morgenrutine_m_mia","state":"off","attributes":{"id":"1739989598132","last_triggered":"2025-02-27T04:30:00.259870+00:00","mode":"single","current":0,"friendly_name":"Morgenrutine m. Mia"},"last_changed":"2025-09-23T10:19:56.416149+00:00","last_reported":"2025-09-23T10:19:56.416149+00:00","last_updated":"2025-09-23T10:19:56.416149+00:00","context":{"id":"01K5V1CJM0MXDHMCD24FTYKT9W","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.varme_kl_5_m_mia","state":"off","attributes":{"id":"1739989752786","last_triggered":"2025-04-25T03:00:00.230103+00:00","mode":"single","current":0,"friendly_name":"Varme kl. 5 m. Mia"},"last_changed":"2025-09-23T10:19:56.416833+00:00","last_reported":"2025-09-23T10:19:56.416833+00:00","last_updated":"2025-09-23T10:19:56.416833+00:00","context":{"id":"01K5V1CJM0HM558XKPAAVHWQSF","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.varme_off_m_mia","state":"on","attributes":{"id":"1739989909345","last_triggered":"2025-07-01T05:00:00.211976+00:00","mode":"single","current":0,"friendly_name":"Varme off 6:30. m. Mia"},"last_changed":"2025-09-23T10:19:56.419324+00:00","last_reported":"2025-09-23T10:19:56.419324+00:00","last_updated":"2025-09-23T10:19:56.419324+00:00","context":{"id":"01K5V1CJM385H01Y5R0YXX3452","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.roomba_tester","state":"on","attributes":{"id":"1740136750809","last_triggered":"2025-09-04T07:00:00.244260+00:00","mode":"single","current":0,"friendly_name":"Roomba clean allover"},"last_changed":"2025-09-23T10:19:56.420052+00:00","last_reported":"2025-09-23T10:19:56.420052+00:00","last_updated":"2025-09-23T10:19:56.420052+00:00","context":{"id":"01K5V1CJM403XVPA7FK4761HTF","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.taend_lys_kl_1650","state":"off","attributes":{"id":"1740152835742","last_triggered":"2025-05-06T19:01:17.841838+00:00","mode":"single","current":0,"friendly_name":"Tænd lys i køkken/stue"},"last_changed":"2025-09-23T10:19:56.420636+00:00","last_reported":"2025-09-23T10:19:56.420636+00:00","last_updated":"2025-09-23T10:19:56.420636+00:00","context":{"id":"01K5V1CJM4CEZSTM4JMF6CA3XT","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.auto_kokkenlys","state":"off","attributes":{"id":"1745584809960","last_triggered":"2025-04-25T13:37:20.760512+00:00","mode":"restart","current":0,"friendly_name":"Auto-køkkenlys"},"last_changed":"2025-09-23T10:19:56.421239+00:00","last_reported":"2025-09-23T10:19:56.421239+00:00","last_updated":"2025-09-23T10:19:56.421239+00:00","context":{"id":"01K5V1CJM58V5NBYEENQP141V1","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.motion_activated_light_pir_sensor_motion","state":"off","attributes":{"id":"1745586713932","last_triggered":null,"mode":"restart","current":0,"friendly_name":"Motion-activated Light-PIR sensor motion"},"last_changed":"2025-09-23T10:19:56.421872+00:00","last_reported":"2025-09-23T10:19:56.421872+00:00","last_updated":"2025-09-23T10:19:56.421872+00:00","context":{"id":"01K5V1CJM5VDFCVX8DMXY25YG1","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.sensor_kokken_lys","state":"off","attributes":{"id":"1745588579913","last_triggered":"2025-05-02T20:01:26.623445+00:00","mode":"single","current":0,"friendly_name":"Sensor sluk køkken lys"},"last_changed":"2025-09-23T10:19:56.422442+00:00","last_reported":"2025-09-23T10:19:56.422442+00:00","last_updated":"2025-09-23T10:19:56.422442+00:00","context":{"id":"01K5V1CJM66686EWNKX0W4FZDA","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.sensor_taend_kokken_lys","state":"off","attributes":{"id":"1745588979916","last_triggered":"2025-05-04T02:33:06.370864+00:00","mode":"single","current":0,"friendly_name":"Sensor tænd køkken lys"},"last_changed":"2025-09-23T10:19:56.423003+00:00","last_reported":"2025-09-23T10:19:56.423003+00:00","last_updated":"2025-09-23T10:19:56.423003+00:00","context":{"id":"01K5V1CJM7HF5NQ6GNMQJR7XQV","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.new_sensor_test","state":"on","attributes":{"id":"1746292155838","last_triggered":"2025-06-02T09:14:59.748791+00:00","mode":"restart","current":0,"friendly_name":"Køkken lys sensor"},"last_changed":"2025-09-23T10:19:56.423731+00:00","last_reported":"2025-09-23T10:19:56.423731+00:00","last_updated":"2025-09-23T10:19:56.423731+00:00","context":{"id":"01K5V1CJM775R07403QSFNR4GT","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.new_sensor_test_2","state":"off","attributes":{"id":"1746292219627","last_triggered":null,"mode":"restart","current":0,"friendly_name":"New sensor test "},"last_changed":"2025-09-23T10:19:56.424295+00:00","last_reported":"2025-09-23T10:19:56.424295+00:00","last_updated":"2025-09-23T10:19:56.424295+00:00","context":{"id":"01K5V1CJM85XT32THBKPJCK2JD","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.new_automation","state":"off","attributes":{"id":"1746292253484","last_triggered":null,"mode":"single","current":0,"friendly_name":"New automation"},"last_changed":"2025-09-23T10:19:56.424858+00:00","last_reported":"2025-09-23T10:19:56.424858+00:00","last_updated":"2025-09-23T10:19:56.424858+00:00","context":{"id":"01K5V1CJM8F3DXDTWCG623057P","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"button.rp_ax58_check_for_updates","state":"2025-09-13T10:21:23.489514+00:00","attributes":{"icon":"mdi:update","friendly_name":"RP-AX58 Check for updates"},"last_changed":"2025-09-23T10:19:57.317960+00:00","last_reported":"2025-09-23T10:19:57.317960+00:00","last_updated":"2025-09-23T10:19:57.317960+00:00","context":{"id":"01K5V1CKG5898M58BHE98BW5AT","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"button.rp_ax58_reboot","state":"unknown","attributes":{"icon":"mdi:restart","friendly_name":"RP-AX58 Reboot"},"last_changed":"2025-09-23T10:19:57.318710+00:00","last_reported":"2025-09-23T10:19:57.318710+00:00","last_updated":"2025-09-23T10:19:57.318710+00:00","context":{"id":"01K5V1CKG63Z5DF829C4ZHHTPA","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"button.rp_ax58_restart_http_daemon","state":"unknown","attributes":{"icon":"mdi:restart","friendly_name":"RP-AX58 Restart HTTP daemon"},"last_changed":"2025-09-23T10:19:57.319337+00:00","last_reported":"2025-09-23T10:19:57.319337+00:00","last_updated":"2025-09-23T10:19:57.319337+00:00","context":{"id":"01K5V1CKG7RXJSFSP4RGDJA4V3","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"button.rp_ax58_restart_wired","state":"unknown","attributes":{"icon":"mdi:ethernet-cable","friendly_name":"RP-AX58 Restart wired"},"last_changed":"2025-09-23T10:19:57.319955+00:00","last_reported":"2025-09-23T10:19:57.319955+00:00","last_updated":"2025-09-23T10:19:57.319955+00:00","context":{"id":"01K5V1CKG71EJXXRCYJZWMMZ4A","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"button.rp_ax58_restart_wireless","state":"unknown","attributes":{"icon":"mdi:restart","friendly_name":"RP-AX58 Restart wireless"},"last_changed":"2025-09-23T10:19:57.320568+00:00","last_reported":"2025-09-23T10:19:57.320568+00:00","last_updated":"2025-09-23T10:19:57.320568+00:00","context":{"id":"01K5V1CKG8YGG5PYG4Z8KJQ1AS","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"update.rp_ax58_firmware_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"3.0.0.4.388.24694_g71d4ea1","in_progress":false,"latest_version":"3.0.0.4.388.24694_g71d4ea1","release_summary":null,"release_url":null,"skipped_version":null,"title":null,"update_percentage":null,"current":"3.0.0.4.388.24694_g71d4ea1","latest":"3.0.0.4.388.24694_g71d4ea1","release_note":null,"device_class":"firmware","entity_picture":"https://brands.home-assistant.io/_/asusrouter/icon.png","icon":"mdi:update","friendly_name":"RP-AX58 Firmware update","supported_features":21},"last_changed":"2025-09-23T10:19:57.341935+00:00","last_reported":"2025-09-23T10:19:57.341935+00:00","last_updated":"2025-09-23T10:19:57.341935+00:00","context":{"id":"01K5V1CKGXK8S51YSHAPZF6VJB","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"event.pet_feeder_motion","state":"2025-09-23T10:14:52.442+00:00","attributes":{"event_types":[null,"detected"],"event_type":"detected","snapshot":"eyJ2IjoiMy4wIiwiYnVja2V0IjoidHktZXUtc3RvcmFnZTMwLXBpYyIsImZpbGVzIjpbWyIvYTFjNWQ4LTIxNDQzMDAyMC15eTIyOWVlMjE1ZGQ1ODk1MjliYS9kZXRlY3QvMTc1ODYyMjQ5Ni5qcGVnIiwiNGY5NjFkOTI2Njc3NmU3NCJdXX0=","device_class":"motion","friendly_name":"Pet feeder Motion"},"last_changed":"2025-09-23T10:20:03.808661+00:00","last_reported":"2025-09-23T10:20:03.808661+00:00","last_updated":"2025-09-23T10:20:03.808661+00:00","context":{"id":"01K5V1CSV06KEN98GNR9GQAW93","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "detected",
+        "last_event_attributes": {
+          "snapshot": "eyJ2IjoiMy4wIiwiYnVja2V0IjoidHktZXUtc3RvcmFnZTMwLXBpYyIsImZpbGVzIjpbWyIvYTFjNWQ4LTIxNDQzMDAyMC15eTIyOWVlMjE1ZGQ1ODk1MjliYS9kZXRlY3QvMTc1ODYyMjQ5Ni5qcGVnIiwiNGY5NjFkOTI2Njc3NmU3NCJdXX0="
+        }
+      },
+      "last_seen": "2025-09-23T10:21:23.703837+00:00"
+    },
+    {
+      "state": {"entity_id":"event.pet_feeder_motion_2","state":"2025-09-15T17:36:42.885+00:00","attributes":{"event_types":[null,"detected"],"event_type":"detected","snapshot":"eyJ2IjoiMy4wIiwiYnVja2V0IjoidHktZXUtc3RvcmFnZTMwLXBpYyIsImZpbGVzIjpbWyIvZjg2ZGQ5LTIxNDQzMDAyMC15eTIyOWVjYjI4Mzk0Mjg2MGYzZS9kZXRlY3QvMTc1Nzk1NzgwMC5qcGVnIiwiMmQyNDI2ZmVmYTU1YWFkNiJdXX0=","device_class":"motion","friendly_name":"Pet feeder Motion"},"last_changed":"2025-09-15T17:36:42.895459+00:00","last_reported":"2025-09-15T17:44:14.940726+00:00","last_updated":"2025-09-15T17:36:42.895459+00:00","context":{"id":"01K5776JWFCZ9SMDWXFGRDPBYH","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "detected",
+        "last_event_attributes": {
+          "snapshot": "eyJ2IjoiMy4wIiwiYnVja2V0IjoidHktZXUtc3RvcmFnZTMwLXBpYyIsImZpbGVzIjpbWyIvZjg2ZGQ5LTIxNDQzMDAyMC15eTIyOWVjYjI4Mzk0Mjg2MGYzZS9kZXRlY3QvMTc1Nzk1NzgwMC5qcGVnIiwiMmQyNDI2ZmVmYTU1YWFkNiJdXX0="
+        }
+      },
+      "last_seen": "2025-09-23T07:51:12.181435+00:00"
+    }
+  ]
+}

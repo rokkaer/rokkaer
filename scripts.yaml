@@ -1,0 +1,74 @@
+sluk:
+  sequence:
+  - action: homeassistant.turn_off
+    metadata: {}
+    data: {}
+    target:
+      entity_id:
+      - light.wiz_rgbw_tunable_7d23be
+      - light.wiz_rgbw_tunable_7cba44
+      - light.wiz_rgbw_tunable_0ad7ce
+      - light.wiz_dimmable_white_7f396a
+      - media_player.bathroom_speaker
+      - media_player.living_room_speaker
+      - media_player.stue_tv_2
+      - climate.your_eurom_heater
+      - climate.radiator_stue
+      - light.wiz_rgbww_tunable_259084
+      - switch.udestue_lys
+      - light.rgbcw_lightbulb_2
+      - light.rgbcw_lightbulb
+      - climate.ac
+      - light.cct_lightbulb_2
+  - action: climate.set_temperature
+    metadata: {}
+    data:
+      hvac_mode: 'off'
+      temperature: 0
+    target:
+      entity_id: climate.ac
+    enabled: false
+  alias: Godnat
+  description: ''
+tand:
+  sequence:
+  - action: homeassistant.turn_on
+    metadata: {}
+    data: {}
+    target:
+      entity_id:
+      - light.wiz_rgbw_tunable_7d23be
+      - light.wiz_rgbw_tunable_7cba44
+      - light.wiz_rgbw_tunable_0ad7ce
+      - light.wiz_dimmable_white_7f396a
+      - media_player.tv_samsung_5_series_32
+      - media_player.bathroom_speaker
+      - media_player.living_room_speaker
+      - media_player.stue_tv_2
+      - climate.your_eurom_heater
+      - switch.wiz_socket_a0d70c
+      - climate.ac
+  alias: Tænd
+  description: ''
+sluk_stoj:
+  sequence:
+  - action: media_player.turn_off
+    metadata: {}
+    data: {}
+    target:
+      entity_id: media_player.huset
+  alias: Sluk støj
+  description: ''
+lys_stue_tand:
+  sequence:
+  - action: light.turn_on
+    metadata: {}
+    data: {}
+    target:
+      entity_id:
+      - light.wiz_rgbww_tunable_259084
+      - light.rgbcw_lightbulb
+      - light.wiz_dimmable_white_7f396a
+      - light.rgbcw_lightbulb_2
+  alias: Lys stue tænd
+  description: ''

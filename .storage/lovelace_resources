@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace_resources",
+  "data": {
+    "items": [
+      {
+        "id": "861d27ee8a284a2eb2ee4c4194571ca3",
+        "url": "/hacsfiles/simple-thermostat/simple-thermostat.js?hacstag=158654878250",
+        "type": "module"
+      },
+      {
+        "id": "b7097de8b7924c999e9c1e22e2721a97",
+        "url": "/hacsfiles/weather-radar-card/weather-radar-card.js?hacstag=487680971210",
+        "type": "module"
+      }
+    ]
+  }
+}

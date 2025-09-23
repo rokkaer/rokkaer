@@ -1,0 +1,222 @@
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+automation: !include automations.yaml
+template: !include sensors.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+## device_tracker:
+##   - platform: ping
+##     hosts:
+##       samsung: 192.168.50.25
+# device_tracker:
+#   - platform: ping
+#   interval_seconds: 30
+#   consider_home: 180
+#   hosts:
+#     phone_name: 192.168.50.25
+#       #mobile_app:
+#       #
+#       #bluetooth:
+#       #  discovery: true
+#       #  track_devices: true
+person:
+  - name: mrj_track
+    id: mrj_track
+    device_trackers:
+      - device_tracker.mikkel_s_s23_ultra
+        #  - name: mia_track
+        #id: mia_track
+        #device_trackers:
+        #- sensor.mia_iphone_ssid
+
+# device_tracker:
+#   - platform: asuswrt
+#     interval_seconds: 30    # Scan every 30 seconds
+#     consider_home: 40      # Mark as away after 1 minute
+#     hosts:
+#       Mikkel-s-S23-Ultra: 12:2C:5E:FF:F0:81
+
+# asuswrt:
+#   host: !secret router_ip
+#   username: !secret router_username
+#   password: !secret asuswrt_password
+
+# weather:
+#   - platform: openweathermap
+#     api_key: !secret openweathermap_api_key
+#     latitude: !secret latitude
+#     longitude: !secret longitude
+#     name: home
+#     mode: hourly # can be 'hourly' or 'daily' for different forecast types
+
+# sensor:
+#   - platform: yr
+#     name: yr_weather
+#     latitude: !secret latitude     # Use your latitude from secrets.yaml
+#     longitude: !secret longitude   # Use your longitude from secrets.yaml
+#     monitored_conditions:
+#       - temperature
+#       - symbol
+#       - precipitation
+#       - windSpeed
+#       - pressure
+#       - humidity
+#       - cloudiness
+#
+
+# notify:
+#   - name: "email"
+#     platform: smtp
+#     server: smtp.gmail.com
+#     port: 587
+#     sender: "rokkaer@gmail.com"
+#     encryption: starttls
+#     username: "rokkaer@gmail.com"
+#     password: "FrejaKat1"
+#     recipient:
+#       - "rokkaer@gmail.com"
+#     sender_name: "Home Assistant"
+
+notify:
+  - name: "email"
+    platform: smtp
+    server: "smtp.gmail.com"
+    port: 587
+    timeout: 15
+    sender: "rokkaer@gmail.com"
+    encryption: starttls
+    username: "rokkaer@gmail.com"
+    password: "onpz btlw bjlq mzwx"
+    recipient:
+      - "rokkaer@gmail.com"
+    sender_name: "Home Assistant"
+
+# shelly:
+#   cloud_auth_key: "MmQ2OWJldWlkF72CA8837E2EDD923D07921C40535DA960BFC9AC93B8747781F87B00743413F2DF8115308DAB5317"
+#   cloud_server: "https://shelly-159-eu.shelly.cloud"
+#
+# mqtt:
+#   sensor:
+#     - name: "Bed Room Temperature"
+#       unique_id: "bedroom_shellyht_temperature"
+#       state_topic: "shellies/shellyht-3C5B7E/sensor/temperature"
+#       unit_of_measurement: "°C"
+#       value_template: "{{ value | round(1) }}"
+#       device_class: "temperature"
+#
+#     - name: "Bed Room Humidity"
+#       unique_id: "bedroom_shellyht_humidity"
+#       state_topic: "shellies/shellyht-3C5B7E/sensor/humidity"
+#       unit_of_measurement: "%"
+#       value_template: "{{ value | round(1) }}"
+#       device_class: "humidity"
+#
+#     - name: "Bed Room Battery"
+#       unique_id: "bedroom_shellyht_battery"
+#       state_topic: "shellies/shellyht-3C5B7E/sensor/battery"
+#       unit_of_measurement: "%"
+#       device_class: "battery"
+#
+# # Optional: Add device to device registry
+# device_tracker:
+#   - platform: mqtt
+#     devices:
+#       bedroom_shellyht:
+#         name: "Bed Room Shelly H&T"
+#         unique_id: shellyht-3C5B7E
+#         source_type: router
+#         state_topic: "shellies/shellyht-3C5B7E/online"
+#         payload_on: "true"
+#         payload_off: "false"
+# mqtt:
+#   sensor:
+#     - name: "Shelly HT Temperature stue"
+#       unique_id: "shellyht_3D0171_stue_temperature"
+#       state_topic: "shellies/shellyht-3D0171/sensor/temperature"
+#       value_template: "{{ value | float }}"
+#       unit_of_measurement: "°C"
+#       device_class: "temperature"
+#       state_class: "measurement"
+# 
+#     - name: "Shelly HT Humidity stue"
+#       unique_id: "shellyht_3D0171_stue_humidity"
+#       state_topic: "shellies/shellyht-3D0171/sensor/humidity"
+#       value_template: "{{ value | float }}"
+#       unit_of_measurement: "%"
+#       device_class: "humidity"
+#       state_class: "measurement"
+# 
+#     - name: "Shelly HT Battery stue"
+#       unique_id: "shellyht_3D0171_stue_battery"
+#       state_topic: "shellies/shellyht-3D0171/sensor/battery"
+#       value_template: "{{ value | int }}"
+#       unit_of_measurement: "%"
+#       device_class: "battery"
+#       state_class: "measurement"
+# 
+#     - name: "Shelly HT Temperature roderum"
+#       unique_id: "shellyht_3BDA51_roderum_temperature"
+#       state_topic: "shellies/shellyht-3BDA51/sensor/temperature"
+#       value_template: "{{ value | float }}"
+#       unit_of_measurement: "°C"
+#       device_class: "temperature"
+#       state_class: "measurement"
+# 
+#     - name: "Shelly HT Humidity roderum"
+#       unique_id: "shellyht_3BDA51_roderum_humidity"
+#       state_topic: "shellies/shellyht-3BDA51/sensor/humidity"
+#       value_template: "{{ value | float }}"
+#       unit_of_measurement: "%"
+#       device_class: "humidity"
+#       state_class: "measurement"
+# 
+#     - name: "Shelly HT Battery roderum"
+#       unique_id: "shellyht_3BDA51_roderum_battery"
+#       state_topic: "shellies/shellyht-3BDA51/sensor/battery"
+#       value_template: "{{ value | int }}"
+#       unit_of_measurement: "%"
+#       device_class: "battery"
+#       state_class: "measurement"
+# 
+#     - name: "Shelly HT Temperature bedroom"
+#       unique_id: "shellyht-3C5B7E-bedroom_temperature"
+#       state_topic: "shellies/shellyht-3C5B7E/sensor/temperature"
+#       value_template: "{{ value | float }}"
+#       unit_of_measurement: "°C"
+#       device_class: "temperature"
+#       state_class: "measurement"
+# 
+#     - name: "Shelly HT Humidity bedroom"
+#       unique_id: "shellyht-3C5B7E-bedroom_humidity"
+#       state_topic: "shellies/shellyht-3C5B7E/sensor/humidity"
+#       value_template: "{{ value | float }}"
+#       unit_of_measurement: "%"
+#       device_class: "humidity"
+#       state_class: "measurement"
+# 
+#     - name: "Shelly HT Battery bedroom"
+#       unique_id: "shellyht-3C5B7E-bedroom_battery"
+#       state_topic: "shellies/shellyht-3C5B7E/sensor/battery"
+#       value_template: "{{ value | int }}"
+#       unit_of_measurement: "%"
+#       device_class: "battery"
+#       state_class: "measurement"
+
+homeassistant:
+  customize:
+    device_tracker.mia_iphone:
+      zone_check_min_gps_accuracy: 100
+
+media_player:
+  - platform: harman_kardon_avr
+    host: 192.168.50.47

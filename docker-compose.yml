@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  homeassistant:
+    container_name: homeassistant
+    image: ghcr.io/home-assistant/home-assistant:stable
+    restart: unless-stopped
+    volumes:
+      - /docker:/config
+        #    ports:
+        #- "8123:8123"
+    network_mode: host

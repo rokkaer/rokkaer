@@ -1,0 +1,739 @@
+- id: '1737202380818'
+  alias: Tænd lys ved ankomst new
+  description: ''
+  triggers:
+  - minutes: '*'
+    trigger: time_pattern
+  conditions:
+  - condition: sun
+    before: sunrise
+    after: sunset
+  - condition: state
+    entity_id: device_tracker.mikkel_s_s23_ultra
+    state: home
+  - condition: or
+    conditions:
+    - condition: state
+      entity_id: light.wiz_rgbw_tunable_7d23be
+      state: unavailable
+    - condition: state
+      entity_id: light.wiz_rgbw_tunable_7d23be
+      state: 'off'
+      for:
+        minutes: 1
+    - condition: state
+      entity_id: light.wiz_rgbw_tunable_7d23be
+      state: 'on'
+  actions:
+  - choose:
+    - conditions:
+      - condition: state
+        entity_id: light.wiz_rgbw_tunable_7d23be
+        state: 'on'
+      sequence:
+      - action: light.turn_on
+        target:
+          entity_id: light.wiz_rgbw_tunable_7d23be
+        data: {}
+    - conditions:
+      - condition: state
+        entity_id: light.wiz_rgbw_tunable_7cba44
+        state: 'on'
+      sequence:
+      - action: light.turn_on
+        target:
+          entity_id: light.wiz_rgbw_tunable_7cba44
+        data: {}
+    - conditions:
+      - condition: state
+        entity_id: light.wiz_rgbw_tunable_0ad7ce
+        state: 'on'
+      sequence:
+      - action: light.turn_on
+        target:
+          entity_id: light.wiz_rgbw_tunable_0ad7ce
+        data: {}
+    - conditions:
+      - condition: state
+        entity_id: light.wiz_dimmable_white_7f396a
+        state: 'on'
+      sequence:
+      - action: light.turn_on
+        target:
+          entity_id: light.wiz_dimmable_white_7f396a
+        data: {}
+  mode: single
+- id: '1737202462573'
+  alias: Sluk ved afrejse
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - device_tracker.mikkel_s_s23_ultra
+    from: home
+    to: not_home
+  conditions:
+  - condition: time
+    after: 06:00:00
+    weekday:
+    - tue
+    - thu
+    before: 08:00:00
+  actions:
+  - action: light.turn_off
+    metadata: {}
+    data: {}
+    target:
+      entity_id:
+      - light.wiz_rgbw_tunable_7d23be
+      - light.wiz_rgbw_tunable_7cba44
+      - light.wiz_rgbw_tunable_0ad7ce
+      - light.wiz_dimmable_white_7f396a
+  - type: turn_off
+    device_id: d435accead2e2c09aaa57ffbd2488512
+    entity_id: 72b654603b2fc4c957a2cc9b386103f3
+    domain: remote
+  - action: media_player.turn_off
+    metadata: {}
+    data: {}
+    target:
+      entity_id: media_player.bedroom_tv
+  - type: turn_off
+    device_id: 1e54a3917ceecafab0b47bf4f3134735
+    entity_id: 0e32311d013b9b07e5356ecc541d5a75
+    domain: switch
+  - action: media_player.turn_off
+    metadata: {}
+    data: {}
+    target:
+      entity_id: media_player.bathroom_speaker
+  - action: climate.turn_off
+    metadata: {}
+    data: {}
+    target:
+      device_id: e2120fc9db10513c286aceae90b50556
+  - action: climate.turn_off
+    metadata: {}
+    data: {}
+    target:
+      device_id: 2136a6ddad13b9b76d0e65aea3422f8b
+  - action: media_player.turn_off
+    metadata: {}
+    data: {}
+    target:
+      device_id: dd6d6d67e807fa08d5583ef853293dff
+  - action: climate.set_temperature
+    metadata: {}
+    data:
+      hvac_mode: 'off'
+    target:
+      entity_id: climate.ac
+  mode: single
+- id: '1737219079532'
+  alias: Roomba clean defunct
+  description: Check at 9 AM if phone is away, then start Roomba
+  triggers:
+  - at: 09:00:00
+    trigger: time
+  conditions:
+  - condition: time
+    weekday:
+    - tue
+    - thu
+  - condition: state
+    entity_id: device_tracker.mikkel_s_s23_ultra
+    state: not_home
+  actions:
+  - target:
+      entity_id: vacuum.57ad05bdd811d4c21d72a7584094ec2a
+    data:
+      preset: Allover
+    action: vacuum.start
+  mode: single
+- id: '1737222392465'
+  alias: Play music bedroom tv
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - device_tracker.mikkel_s_s23_ultra
+    from: not_home
+    to: home
+  conditions: []
+  actions:
+  - action: media_player.play_media
+    metadata:
+      title: Jazz Radio Blues
+      thumbnail: https://www.jazzradio.fr/apple-touch-icon-120x120.png
+      media_class: music
+      children_media_class:
+      navigateIds:
+      - {}
+      - media_content_type: app
+        media_content_id: media-source://radio_browser
+      - media_content_type: music
+        media_content_id: media-source://radio_browser/popular
+    data:
+      media_content_id: media-source://radio_browser/96102c22-0601-11e8-ae97-52543be04c81
+      media_content_type: audio/mpeg
+    target:
+      entity_id: media_player.bedroom_tv
+  mode: single
+- id: '1737223589551'
+  alias: Musik on Google nest
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - device_tracker.mikkel_s_s23_ultra
+    from: not_home
+    to: home
+  conditions: []
+  actions:
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.bathroom_speaker
+    data:
+      media_content_id: media-source://radio_browser/96102c22-0601-11e8-ae97-52543be04c81
+      media_content_type: audio/mpeg
+    metadata:
+      title: Jazz Radio Blues
+      thumbnail: https://www.jazzradio.fr/apple-touch-icon-120x120.png
+      media_class: music
+      children_media_class:
+      navigateIds:
+      - {}
+      - media_content_type: app
+        media_content_id: media-source://radio_browser
+      - media_content_type: music
+        media_content_id: media-source://radio_browser/popular
+  mode: single
+- id: '1737292810511'
+  alias: Met.no Freezing Temperature Warning
+  description: Warns when temperature will drop below 0°C in next 48 hours
+  triggers:
+  - trigger: time_pattern
+    minutes: /5
+    hours: /2
+  conditions:
+  - condition: template
+    value_template: '{{ state_attr(''weather.forecast_home'', ''temperature'') < 1
+      }}
+
+      '
+  actions:
+  - data:
+      title: ❄️ Freezing Temperature Warning
+      message: 'Met.no forecasts temperatures below 0°C within the next 48 hours.
+        Please prepare for freezing conditions: • Protect water pipes from freezing
+        • Cover sensitive outdoor plants • Check heating system • Prepare winter clothing
+
+        '
+    action: persistent_notification.create
+    enabled: false
+  - data:
+      title: ❄️ Freezing Temperature Warning
+      message: Temperatures below 0°C expected within 48 hours
+    action: notify.notify
+    enabled: false
+  - data:
+      message: Warns when temperature will drop below 0°C in next 48 hours
+      title: Freezing Temperature Warning
+    action: notify.email
+  - delay:
+      hours: 2
+      minutes: 0
+      seconds: 0
+    enabled: true
+- id: '1737325852151'
+  alias: Morgenrutine
+  description: ''
+  triggers:
+  - trigger: time
+    at: 05:30:00
+  conditions:
+  - condition: state
+    entity_id: device_tracker.mikkel_s_s23_ultra
+    state: home
+  - condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+  actions:
+  - action: climate.set_temperature
+    metadata: {}
+    data:
+      temperature: 23
+      hvac_mode: heat
+    target:
+      entity_id: climate.ac
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.bathroom_speaker
+    data:
+      media_content_id: media-source://radio_browser/d1a54d2e-623e-4970-ab11-35f7b56c5ec3
+      media_content_type: audio/mpeg
+    metadata:
+      title: Classic Vinyl HD
+      thumbnail: https://icecast.walmradio.com:8443/classic.jpg
+      media_class: music
+      children_media_class:
+      navigateIds:
+      - {}
+      - media_content_type: app
+        media_content_id: media-source://radio_browser
+      - media_content_type: music
+        media_content_id: media-source://radio_browser/popular
+    enabled: false
+  - action: light.turn_on
+    metadata: {}
+    data: {}
+    target:
+      entity_id:
+      - light.wiz_rgbw_tunable_7d23be
+      - light.wiz_rgbw_tunable_7cba44
+      - light.wiz_rgbw_tunable_0ad7ce
+      - light.wiz_dimmable_white_7f396a
+    enabled: false
+  mode: single
+- id: '1737757373932'
+  alias: Ac weekend tænd
+  description: ''
+  triggers:
+  - trigger: time
+    at: 08:00:00
+  conditions:
+  - condition: state
+    entity_id: device_tracker.mikkel_s_s23_ultra
+    state: home
+  - condition: time
+    weekday:
+    - sat
+    - sun
+  actions:
+  - action: climate.set_temperature
+    metadata: {}
+    data:
+      temperature: 23
+    target:
+      entity_id: climate.ac
+  mode: single
+- id: '1739011669385'
+  alias: Cold Weather Alert
+  description: Checks if temperature will drop below 1°C in the next 7 days
+  trigger:
+  - platform: state
+    entity_id: weather.forecast_home
+  - platform: time_pattern
+    hours: /1
+  condition:
+  - condition: template
+    value_template: '{{ state_attr(''weather.forecast_home'', ''temperature'') < 1
+      }}
+
+      '
+  action:
+  - service: persistent_notification.create
+    data:
+      title: Cold Weather Alert
+      message: Temperature will drop below 1°C
+- id: '1739699926921'
+  alias: Shelly H&T Data Receiver
+  description: ''
+  triggers:
+  - trigger: webhook
+    allowed_methods:
+    - POST
+    - GET
+    - HEAD
+    - PUT
+    local_only: false
+    webhook_id: shellyht
+  conditions: []
+  actions:
+  - action: persistent_notification.create
+    data:
+      message: Shelly H&T reported
+  mode: single
+- id: '1739989416397'
+  alias: Tænd lys ved ankomst
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - device_tracker.mikkel_s_s23_ultra
+    from: not_home
+    to: home
+  conditions:
+  - condition: sun
+    before: sunrise
+    after: sunset
+    enabled: true
+  - condition: time
+    after: '16:20:00'
+    weekday:
+    - tue
+    - thu
+    - sat
+    - fri
+    - wed
+    - mon
+    - sun
+    enabled: false
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    data: {}
+    target:
+      entity_id:
+      - light.wiz_rgbw_tunable_7d23be
+      - light.wiz_rgbw_tunable_7cba44
+      - light.wiz_rgbw_tunable_0ad7ce
+      - light.wiz_dimmable_white_7f396a
+      - light.wiz_rgbww_tunable_259084
+      - light.rgbcw_lightbulb_2
+      - light.rgbcw_lightbulb
+      - light.cct_lightbulb
+  mode: single
+- id: '1739989598132'
+  alias: Morgenrutine m. Mia
+  description: ''
+  triggers:
+  - trigger: time
+    at: 05:30:00
+  conditions:
+  - condition: state
+    entity_id: device_tracker.mikkel_s_s23_ultra
+    state: home
+  - condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+  - condition: state
+    entity_id: device_tracker.mia_iphone
+    state: home
+  actions:
+  - action: climate.set_temperature
+    metadata: {}
+    data:
+      temperature: 23
+      hvac_mode: heat
+    target:
+      entity_id: climate.ac
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.bathroom_speaker
+    data:
+      media_content_id: media-source://radio_browser/d1a54d2e-623e-4970-ab11-35f7b56c5ec3
+      media_content_type: audio/mpeg
+    metadata:
+      title: Classic Vinyl HD
+      thumbnail: https://icecast.walmradio.com:8443/classic.jpg
+      media_class: music
+      children_media_class:
+      navigateIds:
+      - {}
+      - media_content_type: app
+        media_content_id: media-source://radio_browser
+      - media_content_type: music
+        media_content_id: media-source://radio_browser/popular
+    enabled: false
+  - action: light.turn_on
+    metadata: {}
+    data: {}
+    target:
+      entity_id:
+      - light.wiz_rgbw_tunable_7d23be
+      - light.wiz_rgbw_tunable_7cba44
+      - light.wiz_rgbw_tunable_0ad7ce
+      - light.wiz_dimmable_white_7f396a
+  mode: single
+- id: '1739989752786'
+  alias: Varme kl. 5 m. Mia
+  description: ''
+  triggers:
+  - trigger: time
+    at: 05:00:00
+  conditions:
+  - condition: state
+    entity_id: device_tracker.mikkel_s_s23_ultra
+    state: home
+  - condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+  - condition: state
+    entity_id: device_tracker.mia_iphone
+    state: home
+    enabled: false
+  actions:
+  - action: climate.set_temperature
+    metadata: {}
+    data:
+      temperature: 23
+      hvac_mode: heat
+    target:
+      entity_id: climate.ac
+  - action: climate.set_temperature
+    metadata: {}
+    data:
+      temperature: 18
+      hvac_mode: heat
+    target:
+      device_id: 2136a6ddad13b9b76d0e65aea3422f8b
+  mode: single
+- id: '1739989909345'
+  alias: Varme off 6:30. m. Mia
+  description: ''
+  triggers:
+  - trigger: time
+    at: 07:00:00
+  conditions:
+  - condition: state
+    entity_id: device_tracker.mikkel_s_s23_ultra
+    state: not_home
+  - condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+  - condition: state
+    entity_id: device_tracker.mia_iphone
+    state: home
+    enabled: false
+  actions:
+  - action: climate.set_temperature
+    metadata: {}
+    data:
+      hvac_mode: 'off'
+    target:
+      entity_id: climate.ac
+  - action: climate.set_temperature
+    metadata: {}
+    data:
+      hvac_mode: 'off'
+    target:
+      device_id: 2136a6ddad13b9b76d0e65aea3422f8b
+  mode: single
+- id: '1740136750809'
+  alias: Roomba clean allover
+  description: Check at 9 AM if phone is away, then start Roomba
+  triggers:
+  - at: 09:00:00
+    trigger: time
+    enabled: true
+  conditions:
+  - condition: time
+    weekday:
+    - tue
+    - thu
+    enabled: true
+  - condition: state
+    entity_id: device_tracker.mikkel_s_s23_ultra
+    state: not_home
+    enabled: true
+  actions:
+  - target:
+      entity_id: vacuum.roomba
+    data:
+      command: clean
+    action: vacuum.send_command
+  mode: single
+- id: '1740152835742'
+  alias: Tænd lys i køkken/stue
+  description: ''
+  triggers:
+  - trigger: time
+    at: '16:20:00'
+    enabled: false
+  - trigger: sun
+    event: sunset
+    offset: 0
+  conditions:
+  - condition: state
+    entity_id: device_tracker.mikkel_s_s23_ultra
+    state: home
+  - condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+    - sun
+    - sat
+  - condition: state
+    entity_id: device_tracker.mia_iphone
+    state: home
+    enabled: false
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    data: {}
+    target:
+      entity_id:
+      - light.wiz_dimmable_white_7f396a
+      - light.wiz_rgbww_tunable_259084
+      - light.rgbcw_lightbulb_2
+      - light.rgbcw_lightbulb
+      - light.cct_lightbulb
+  mode: single
+- id: '1745584809960'
+  alias: Auto-køkkenlys
+  description: ''
+  use_blueprint:
+    path: homeassistant/motion_light.yaml
+    input:
+      motion_entity: binary_sensor.pir_sensor_motion
+      light_target:
+        entity_id:
+        - light.wiz_rgbw_tunable_7d23be
+        - light.wiz_rgbw_tunable_7cba44
+        - light.wiz_rgbw_tunable_0ad7ce
+      no_motion_wait: 60
+- id: '1745586713932'
+  alias: Motion-activated Light-PIR sensor motion
+  description: ''
+  use_blueprint:
+    path: homeassistant/motion_light.yaml
+    input:
+      motion_entity: binary_sensor.pir_sensor_motion
+      light_target:
+        entity_id:
+        - light.wiz_rgbw_tunable_7d23be
+        - light.wiz_rgbw_tunable_0ad7ce
+        - light.wiz_rgbw_tunable_7cba44
+- id: '1745588579913'
+  alias: Sensor sluk køkken lys
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - binary_sensor.pir_sensor_motion_2
+    from: 'on'
+    to: 'off'
+  - trigger: state
+    entity_id:
+    - binary_sensor.pir_sensor_motion_2
+    from: 'on'
+    to: unavailable
+  - trigger: state
+    entity_id:
+    - binary_sensor.pir_sensor_motion_2
+    from: 'on'
+    to: unknown
+  conditions:
+  - condition: sun
+    before: sunrise
+    after: sunset
+    enabled: false
+  - condition: time
+    after: '16:20:00'
+    weekday:
+    - tue
+    - thu
+    - sat
+    - fri
+    - wed
+    - mon
+    - sun
+    enabled: false
+  actions:
+  - action: light.turn_off
+    metadata: {}
+    data: {}
+    target:
+      entity_id:
+      - light.wiz_rgbw_tunable_7d23be
+      - light.wiz_rgbw_tunable_7cba44
+      - light.wiz_rgbw_tunable_0ad7ce
+  mode: single
+- id: '1745588979916'
+  alias: Sensor tænd køkken lys
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - binary_sensor.pir_sensor_motion
+    from: 'off'
+    to: 'on'
+  - trigger: state
+    entity_id:
+    - binary_sensor.pir_sensor_motion
+    from: unavailable
+    to: 'on'
+  - trigger: state
+    entity_id:
+    - binary_sensor.pir_sensor_motion
+    from: unknown
+    to: 'on'
+  conditions:
+  - condition: sun
+    before: sunrise
+    after: sunset
+    enabled: true
+  - condition: time
+    after: '16:20:00'
+    weekday:
+    - tue
+    - thu
+    - sat
+    - fri
+    - wed
+    - mon
+    - sun
+    enabled: false
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    data: {}
+    target:
+      entity_id:
+      - light.wiz_rgbw_tunable_7d23be
+      - light.wiz_rgbw_tunable_7cba44
+      - light.wiz_rgbw_tunable_0ad7ce
+  mode: single
+- id: '1746292155838'
+  alias: Køkken lys sensor
+  description: ''
+  use_blueprint:
+    path: homeassistant/motion_light.yaml
+    input:
+      motion_entity: binary_sensor.pir_sensor_motion
+      light_target:
+        entity_id:
+        - light.wiz_rgbw_tunable_7d23be
+        - light.wiz_rgbw_tunable_7cba44
+        - light.wiz_rgbw_tunable_0ad7ce
+      no_motion_wait: 300
+- id: '1746292219627'
+  alias: 'New sensor test '
+  description: ''
+  use_blueprint:
+    path: homeassistant/motion_light.yaml
+    input:
+      motion_entity: binary_sensor.pir_sensor_motion
+      light_target:
+        entity_id:
+        - light.wiz_rgbw_tunable_7d23be
+        - light.wiz_rgbw_tunable_7cba44
+        - light.wiz_rgbw_tunable_0ad7ce
+      no_motion_wait: 360
+- id: '1746292253484'
+  alias: New automation
+  description: ''
+  triggers: []
+  conditions: []
+  actions: []
+  mode: single

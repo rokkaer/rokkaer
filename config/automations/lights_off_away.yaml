@@ -1,0 +1,19 @@
+id: '1697909123457'
+alias: "Sluk lys når telefon forlader LAN"
+description: "Slukker lys automatisk når telefonen forlader hjemmet"
+trigger:
+  - platform: state
+    entity_id: device_tracker.sm_s918b
+    from: "home"
+    to: "not_home"
+action:
+  - service: light.turn_off
+    target:
+      entity_id:
+        - light.wiz_rgbw_tunable_7d23be
+        - light.wiz_rgbw_tunable_7cba44
+        - light.wiz_rgbw_tunable_0ad7ce
+        - light.wiz_dimmable_white_7f396a
+    data:
+      transition: 2
+mode: single

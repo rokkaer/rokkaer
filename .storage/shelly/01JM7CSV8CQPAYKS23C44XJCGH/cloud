@@ -1,0 +1,87 @@
+{
+  "version": "1",
+  "minor_version": 1,
+  "key": "shelly/01JM7CSV8CQPAYKS23C44XJCGH/cloud",
+  "data": {
+    "device_list": {
+      "3c5b7e": {
+        "id": "3c5b7e",
+        "type": "SHHT-1",
+        "category": "sensor",
+        "position": 3,
+        "gen": 1,
+        "channel": 0,
+        "channels_count": 1,
+        "mode": "sensor",
+        "name": "Temp_2_sleepingroom",
+        "room_id": 1,
+        "image": "images/device_images/SHHT-1.png",
+        "cloud_options": {
+          "exclude_event_log": false
+        },
+        "modified": 1739705252,
+        "ip": "192.168.50.47",
+        "ssid": "control",
+        "cloud_online": true,
+        "notif_permissions": {
+          "offline": [
+            1,
+            1
+          ]
+        },
+        "name_sync": false
+      },
+      "3d0171": {
+        "id": "3d0171",
+        "type": "SHHT-1",
+        "category": "sensor",
+        "position": 2,
+        "gen": 1,
+        "channel": 0,
+        "channels_count": 1,
+        "mode": "sensor",
+        "name": "Stue",
+        "room_id": 1,
+        "image": "images/device_images/SHHT-1.png",
+        "cloud_options": {
+          "exclude_event_log": false
+        },
+        "modified": 1739705151,
+        "ip": "192.168.50.42",
+        "ssid": "control"
+      },
+      "3bda51": {
+        "id": "3bda51",
+        "type": "SHHT-1",
+        "category": "sensor",
+        "position": 0,
+        "gen": 1,
+        "channel": 0,
+        "channels_count": 1,
+        "mode": "sensor",
+        "name": "Temp_1_roderum",
+        "room_id": -10,
+        "image": "images/device_images/SHHT-1.png",
+        "cloud_options": {
+          "exclude_event_log": false
+        },
+        "modified": 1738144202,
+        "ip": "192.168.50.71",
+        "ssid": "control",
+        "cloud_online": true
+      }
+    },
+    "room_list": {
+      "1": {
+        "name": "stue",
+        "image": "images/room_def/bedroom_img_def_m.jpg",
+        "backgroundColor": "",
+        "main_sensor": false,
+        "overview_style": false,
+        "position": 0,
+        "id": 1,
+        "modified": 1739705143
+      }
+    }
+  }
+}

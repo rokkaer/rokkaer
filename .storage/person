@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "minor_version": 1,
+  "key": "person",
+  "data": {
+    "items": [
+      {
+        "name": "mrj",
+        "user_id": "5cb3d29710b54e27816bbd8bf7ecb3fb",
+        "device_trackers": [
+          "device_tracker.sm_s918b"
+        ],
+        "id": "mrj"
+      },
+      {
+        "id": "mia",
+        "name": "mia",
+        "device_trackers": [
+          "device_tracker.mia_iphone"
+        ],
+        "user_id": "52ca2bed7062417d827cbca04263f83c",
+        "picture": null
+      },
+      {
+        "id": "nanna",
+        "name": "nanna",
+        "device_trackers": [],
+        "user_id": "0f883cb9833b410699278c704f87c62a",
+        "picture": null
+      }
+    ]
+  }
+}

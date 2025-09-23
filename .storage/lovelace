@@ -1,0 +1,198 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace",
+  "data": {
+    "config": {
+      "views": [
+        {
+          "path": "default_view",
+          "title": "Home",
+          "cards": [
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "light.wiz_dimmable_white_7f396a"
+                },
+                {
+                  "entity": "light.wiz_rgbww_tunable_259084"
+                },
+                {
+                  "entity": "light.cct_lightbulb"
+                },
+                {
+                  "entity": "light.rgbcw_lightbulb"
+                },
+                {
+                  "entity": "light.rgbcw_lightbulb_2"
+                },
+                {
+                  "entity": "light.cct_lightbulb_2"
+                }
+              ],
+              "title": "Stue lys"
+            },
+            {
+              "type": "entities",
+              "entities": [
+                "light.wiz_rgbw_tunable_7d23be",
+                "light.wiz_rgbw_tunable_7cba44",
+                "light.wiz_rgbw_tunable_0ad7ce"
+              ],
+              "show_header_toggle": true,
+              "title": "Køkken lys"
+            },
+            {
+              "type": "entities",
+              "entities": [
+                "script.sluk"
+              ]
+            },
+            {
+              "show_current": true,
+              "show_forecast": true,
+              "type": "weather-forecast",
+              "entity": "weather.forecast_home",
+              "forecast_type": "hourly",
+              "secondary_info_attribute": "wind_speed"
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "switch.wiz_socket_a0d70c"
+                }
+              ],
+              "title": "Bedroom"
+            },
+            {
+              "type": "grid",
+              "square": false,
+              "columns": 1,
+              "cards": [
+                {
+                  "type": "thermostat",
+                  "entity": "climate.ac",
+                  "features": [
+                    {
+                      "type": "climate-hvac-modes",
+                      "hvac_modes": [
+                        "off",
+                        "heat_cool",
+                        "cool",
+                        "dry",
+                        "fan_only",
+                        "heat"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "sensor.ac_outside_temperature"
+                    }
+                  ],
+                  "title": "Living Room"
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "square": false,
+              "columns": 1,
+              "cards": [
+                {
+                  "type": "thermostat",
+                  "entity": "climate.radiator_stue",
+                  "features": [
+                    {
+                      "type": "climate-hvac-modes",
+                      "hvac_modes": [
+                        "off",
+                        "heat"
+                      ]
+                    }
+                  ],
+                  "theme": "minimalist-mobile"
+                }
+              ]
+            },
+            {
+              "type": "entities",
+              "entities": [
+                "vacuum.roomba"
+              ],
+              "title": "Roomba"
+            },
+            {
+              "type": "grid",
+              "square": false,
+              "columns": 1,
+              "cards": [
+                {
+                  "type": "humidifier",
+                  "entity": "humidifier.emma_dehumidifier_eeese_air_care",
+                  "features": [
+                    {
+                      "type": "humidifier-toggle"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "media-control",
+              "entity": "media_player.bedroom_tv"
+            },
+            {
+              "type": "media-control",
+              "entity": "media_player.stue_tv_2"
+            },
+            {
+              "type": "media-control",
+              "entity": "media_player.living_room_speaker"
+            },
+            {
+              "type": "media-control",
+              "entity": "media_player.bathroom_speaker"
+            },
+            {
+              "type": "thermostat",
+              "entity": "climate.your_eurom_heater",
+              "features": [
+                {
+                  "type": "climate-hvac-modes",
+                  "hvac_modes": [
+                    "off",
+                    "heat"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "square": false,
+              "columns": 1,
+              "cards": [
+                {
+                  "type": "entities",
+                  "entities": [
+                    "remote.samsung_5_series_32"
+                  ],
+                  "title": "Samsung 5 Series (32)"
+                },
+                {
+                  "type": "media-control",
+                  "entity": "media_player.samsung_5_series_32"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

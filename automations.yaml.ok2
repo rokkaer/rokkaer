@@ -1,0 +1,58 @@
+alias: "Tænd lys når telefon forbinder til LAN"
+description: "Tænder lys automatisk når telefonen kommer hjem"
+trigger:
+  - platform: state
+    entity_id: device_tracker.mikkel_s_s23_ultra
+#    entity_id: device_tracker.sm_s918b
+    from: "not_home"
+    to: "home"
+#condition:
+#  - condition: sun
+#    after: sunset
+#    before: sunrise
+action:
+  - service: light.turn_on
+    target:
+      entity_id:
+        - light.wiz_rgbw_tunable_7d23be
+        - light.wiz_rgbw_tunable_7cba44
+        - light.wiz_rgbw_tunable_0ad7ce
+        - light.wiz_dimmable_white_7f396a
+    data:
+      brightness: 255
+      transition: 2
+mode: single
+  
+#- alias: "More Accurate Presence"
+#  trigger:
+#    - platform: state
+#      entity_id:
+#        - device_tracker.samsung_ping
+#        - device_tracker.sm_s918b
+#  mode: restart
+#  variables:
+#    home_count: >
+#      {% set trackers = [
+#        states('device_tracker.samsung_ping'),
+#        states('device_tracker.sm_s918b')
+#      ] %}
+#      {{ trackers | select('eq', 'home') | list | count }}
+#  condition:
+#    - condition: template
+#      value_template: "{{ home_count > 0 }}"
+#  action:
+#    - service: >
+#        {% if home_count >= 1 %}
+#          person.seen
+#        {% else %}
+#          person.not_seen
+#        {% endif %}
+#      target:
+#        entity_id: person.mrj_track
+#      data:
+#        location_name: >
+#          {% if home_count >= 1 %}
+#            home
+#          {% else %}
+#            not_home
+#          {% endif %}
