@@ -1,0 +1,55 @@
+---
+trigger:
+  - main
+
+pool:
+  vmImage: ubuntu-latest
+
+jobs:
+  - deployment: VMDeploy
+    displayName: Deploy to VM
+    environment:
+      name: test
+      resourceName: agent1
+      resourceType: virtualMachine
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+            - script: |
+                sudo dnf update -y
+                sudo dnf install -y genisoimage xorriso
+
+                # Create a working directory
+                sudo mkdir -p /iso/{EFI,BOOT,Packages,images,isolinux}
+                sudo mkdir -p /new/
+                # Mount the original Red Hat ISO (modify path as necessary)
+                sudo mount -o loop /org/rhel-9.4-x86_64-boot.iso /mnt
+
+                # Copy original files to the working directory
+                sudo cp -r /mnt/* /iso/
+
+                # Unmount the ISO
+                sudo umount /mnt
+
+                # Update your image
+                sudo sed -i '/set default="1"/ c\set default="0"' /iso/EFI/BOOT/grub.cfg
+                #sudo awk '{if ($0 ~ /linuxefi \/images\/pxeboot\/vmlinuz inst.stage2=hd:LABEL=RHEL-9-4-0-BaseOS-x86_64 quiet/) print "\tlinuxefi /images/pxeboot/vmlinuz quiet inst.ks=cdrom:/ks.cfg"; else print $0;}' /iso/EFI/BOOT/grub.cfg > temp && sudo mv temp /iso/EFI/BOOT/grub.cfg
+                sudo sed -i '/default=1/ c\default=0' /iso/isolinux/grub.conf
+                #sudo sed -i 's/kernel @KERNELPATH@ @ROOT@ quiet/kernel @KERNELPATH@ quiet inst.ks=cdrom:\/ks.cfg/' /iso/isolinux/grub.conf
+                ##sudo sed -i '1s|.*|append initrd=initrd.img quiet inst.ks=cdrom:/ks.cfg|' /iso/isolinux/isolinux.cfg
+                sudo sed -i 's|append initrd=initrd.img inst.stage2=hd:LABEL=RHEL-9-4-0-BaseOS-x86_64 quiet|append initrd=initrd.img inst.ks=cdrom:/ks.cfg quiet|' /iso/isolinux/isolinux.cfg
+                sudo cp /home/mrj/work/image/ks.cfg /iso/
+
+                # Make your modifications here
+                # Example: Add custom scripts, change configurations, etc.
+                # sudo echo "Custom modification" >> /iso/README.txt
+                # Can not be parsed                echo "Custom modification" | sudo tee -a /iso/README.txt > /dev/null
+
+                # Create the modified ISO
+                sudo genisoimage -U -r -v -J -joliet-long -V RHEL-9.4 -volset RHEL-9.4 -A RHEL-9.4 -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -eltorito-alt-boot -e images/efiboot.img -no-emul-boot -o /new/rhel-modified.iso /iso
+              displayName: 'Create Modified Bootable Red Hat ISO'
+
+            - publish: /new/rhel-modified.iso
+              artifact: rokkaer_artifact
+              # artifact: modified-rhel-iso
