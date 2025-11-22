@@ -1,0 +1,27 @@
+name: Upload ISO
+
+on:
+  push:
+    branches: [ "master" ]
+  workflow_dispatch:
+
+jobs:
+  upload-iso:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Opret eller kopier ISO-fil
+        run: |
+          # Eksempel: Opret en dummy ISO-fil
+          dd if=/dev/zero of=min-iso-fil.iso bs=1M count=10
+          echo "Dette er en test-ISO" > min-iso-fil.iso
+
+      - name: Upload ISO som artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: min-iso-fil
+          path: min-iso-fil.iso
+          retention-days: 7
