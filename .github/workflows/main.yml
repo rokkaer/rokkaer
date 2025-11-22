@@ -1,0 +1,13 @@
+name: Test Agent2
+
+on:
+  workflow_dispatch:  # Tillader manuel udløsning af workflowen
+
+jobs:
+  test-job:
+    runs-on: [self-hosted, Linux, label-2]  # Brug de labels, der passer til din agent2
+    steps:
+      - name: Check runner hostname
+        run: |
+          echo "Dette job kører på: $(hostname)"
+          echo "Runner navn: ${RUNNER_NAME}"
