@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: self-hosted-pool
+    runs-on: [self-hosted, Linux, label-2] 
 
     steps:
       - name: Checkout repository
