@@ -11,14 +11,23 @@ jobs:
     runs-on: [self-hosted, Linux, label-2] # Eller 'ubuntu-latest', hvis du ikke bruger self-hosted runners
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Download original ISO
+      - name: Download artifact from previous workflow
         uses: actions/download-artifact@v4
         with:
-          name: min-iso-fil  # Samme navn som i upload-workflowen
-          path: ./iso/       # Mappen, hvor ISO-filen skal gemmes
+          # Download from triggering workflow_run
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: ${{ github.event.workflow_run.id }}
+          name: min-iso-fil
+          path: ./iso/
+          
+#      - name: Checkout repository
+#        uses: actions/checkout@v4
+#
+#      - name: Download original ISO
+#        uses: actions/download-artifact@v4
+#        with:
+#          name: min-iso-fil  # Samme navn som i upload-workflowen
+#          path: ./iso/       # Mappen, hvor ISO-filen skal gemmes
 
       - name: Vis indhold af downloadede filer
         run: |
