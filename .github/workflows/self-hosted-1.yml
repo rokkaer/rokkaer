@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    runs-on: self-hosted-pool  # Bruger din self-hosted runner
+    runs-on: [self-hosted, Linux, label-2]  # Bruger din self-hosted runner
     env:
       MY_VAR: "test-min-variable"
 
