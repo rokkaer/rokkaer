@@ -1,0 +1,32 @@
+name: Build ISO
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: self-hosted-pool
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download original ISO
+        uses: actions/download-artifact@v4
+        with:
+          name: min-iso-fil.iso
+          path: ./iso/
+
+#      - name: Build new ISO
+#        run: |
+#          cp -r ./config/* ./iso/config/
+#          mkisofs -o new-image.iso -V "MY_ISO" -J -r ./iso/
+#          mv new-image.iso ./new-iso/
+
+#      - name: Upload new ISO
+#        uses: actions/upload-artifact@v3
+#        with:
+#          name: new-iso
+#          path: ./new-iso/new-image.iso
