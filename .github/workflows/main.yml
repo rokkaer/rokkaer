@@ -1,4 +1,4 @@
-name: Test Agent2
+name: Test Agent2 commit test
 
 on:
   workflow_dispatch:  # Tillader manuel udløsning af workflowen
