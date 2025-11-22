@@ -1,15 +1,49 @@
-trigger:
-- main
+# 
+# Azure pipeline syntax
+#
+#trigger:
+#- main
 
-pool:
-  name: self-hosted-pool
+#pool:
+#  name: self-hosted-pool
 
-steps:
-- script: echo "Hello, world!"
-  displayName: 'Run a one-line script'
-- task: NodeTool@0
-  inputs:
-    versionSpec: '16.x'
-- script: |
-    echo something /tmp/something
-  displayName: 'echo something'
+#steps:
+#- script: echo "Hello, world!"
+#  displayName: 'Run a one-line script'
+#- task: NodeTool@0
+#  inputs:
+#    versionSpec: '16.x'
+#- script: |
+#    echo something /tmp/something
+#  displayName: 'echo something'
+#
+name: Self-Hosted Runner Workflow
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: self-hosted  # Bruger din self-hosted runner
+    env:
+      MY_VAR: "test-min-variable"
+
+    steps:
+      - name: Run a one-line script
+        run: echo "Hello, world!"
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '16.x'
+
+      - name: Echo something
+        run: |
+          echo something > /tmp/something
+          cat /tmp/something
+
+      - name: Print env var
+        run: |
+          echo $MY_VAR
+          echo $MY_VAR >> /tmp/something
