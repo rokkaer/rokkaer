@@ -1,0 +1,15 @@
+trigger:
+- main
+
+pool:
+  name: agent_pool_local
+
+steps:
+- script: echo "Hello, world!"
+  displayName: 'Run a one-line script'
+- task: NodeTool@0
+  inputs:
+    versionSpec: '16.x'
+- script: |
+    echo something /tmp/something
+  displayName: 'echo something'
