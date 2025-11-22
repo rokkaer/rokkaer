@@ -16,7 +16,7 @@ jobs:
       - name: Download original ISO
         uses: actions/download-artifact@v4
         with:
-          name: min-iso-fil.iso.zip
+          name: min-iso-fil
           path: ./iso/
 
 #      - name: Build new ISO
