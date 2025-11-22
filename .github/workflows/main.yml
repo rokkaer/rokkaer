@@ -1,4 +1,4 @@
-name: Test Agent2 commit test
+name: Test Agent2 commit test igen med commit mention disabled i AZ
 
 on:
   workflow_dispatch:  # Tillader manuel udløsning af workflowen
