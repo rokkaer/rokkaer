@@ -20,7 +20,7 @@ jobs:
           echo "Dette er en test-ISO" > min-iso-fil.iso
 
       - name: Upload ISO som artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: min-iso-fil
           path: min-iso-fil.iso
