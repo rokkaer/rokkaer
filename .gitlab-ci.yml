@@ -1,1 +1,109 @@
+# .gitlab-ci.yml
+# Formål: Sammenlign om det er hurtigere at bruge ét samlet image
+# vs. 5 specialiserede images i GitLab CI pipelines.
 
+stages:
+  - test_separate   # Test 1: 5 forskellige images
+  - test_combined   # Test 2: 1 samlet image
+
+# ─────────────────────────────────────────────
+# TEST 1: 5 separate images
+# Hver job bruger sit eget image og udfører én CLI-kommando
+# ─────────────────────────────────────────────
+
+separate:node:
+  stage: test_separate
+  image: node:20-alpine
+  script:
+    - echo "START $(date +%s%3N)" > /tmp/ts
+    - node --version
+    - echo "Job: node" && sleep 1   # Simuler lidt arbejde
+    - echo "END $(date +%s%3N)" >> /tmp/ts
+    - |
+      START=$(sed -n '1p' /tmp/ts | awk '{print $2}')
+      END=$(sed -n '2p' /tmp/ts | awk '{print $2}')
+      echo "⏱ node image duration: $((END - START)) ms"
+
+separate:python:
+  stage: test_separate
+  image: python:3.12-alpine
+  script:
+    - echo "START $(date +%s%3N)" > /tmp/ts
+    - python --version
+    - echo "Job: python" && sleep 1
+    - echo "END $(date +%s%3N)" >> /tmp/ts
+    - |
+      START=$(sed -n '1p' /tmp/ts | awk '{print $2}')
+      END=$(sed -n '2p' /tmp/ts | awk '{print $2}')
+      echo "⏱ python image duration: $((END - START)) ms"
+
+separate:golang:
+  stage: test_separate
+  image: golang:1.22-alpine
+  script:
+    - echo "START $(date +%s%3N)" > /tmp/ts
+    - go version
+    - echo "Job: golang" && sleep 1
+    - echo "END $(date +%s%3N)" >> /tmp/ts
+    - |
+      START=$(sed -n '1p' /tmp/ts | awk '{print $2}')
+      END=$(sed -n '2p' /tmp/ts | awk '{print $2}')
+      echo "⏱ golang image duration: $((END - START)) ms"
+
+separate:aws:
+  stage: test_separate
+  image: amazon/aws-cli:latest
+  script:
+    - echo "START $(date +%s%3N)" > /tmp/ts
+    - aws --version
+    - echo "Job: aws-cli" && sleep 1
+    - echo "END $(date +%s%3N)" >> /tmp/ts
+    - |
+      START=$(sed -n '1p' /tmp/ts | awk '{print $2}')
+      END=$(sed -n '2p' /tmp/ts | awk '{print $2}')
+      echo "⏱ aws-cli image duration: $((END - START)) ms"
+
+separate:terraform:
+  stage: test_separate
+  image: hashicorp/terraform:latest
+  script:
+    - echo "START $(date +%s%3N)" > /tmp/ts
+    - terraform version
+    - echo "Job: terraform" && sleep 1
+    - echo "END $(date +%s%3N)" >> /tmp/ts
+    - |
+      START=$(sed -n '1p' /tmp/ts | awk '{print $2}')
+      END=$(sed -n '2p' /tmp/ts | awk '{print $2}')
+      echo "⏱ terraform image duration: $((END - START)) ms"
+
+# ─────────────────────────────────────────────
+# TEST 2: Ét samlet image med alle CLI-tools
+# Bruger alpine + installer alt i ét job
+# (eller brug dit eget custom image her)
+# ─────────────────────────────────────────────
+
+combined:all-tools:
+  stage: test_combined
+  image: alpine:3.19
+  before_script:
+    # Installer alle tools i ét image (simulerer et custom "fat image")
+    - apk add --no-cache curl nodejs npm python3 go aws-cli
+    - |
+      # Terraform via direkte download (apk har ikke terraform)
+      TERRAFORM_VERSION=1.7.5
+      curl -sLO https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip
+      unzip -q terraform_${TERRAFORM_VERSION}_linux_amd64.zip -d /usr/local/bin/
+  script:
+    - echo "START $(date +%s%3N)" > /tmp/ts
+    - echo "=== Alle tools i ét image ==="
+    - node --version
+    - python3 --version
+    - go version
+    - aws --version
+    - terraform version
+    - echo "Alle checks done" && sleep 1
+    - echo "END $(date +%s%3N)" >> /tmp/ts
+    - |
+      START=$(sed -n '1p' /tmp/ts | awk '{print $2}')
+      END=$(sed -n '2p' /tmp/ts | awk '{print $2}')
+      echo "⏱ combined image duration: $((END - START)) ms"
